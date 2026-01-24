@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardel Guimarães - Automações com IA | JGAutomações.AI</title>
+    <meta name="description" content="Especialista em automações inteligentes para empresas. Atendimento 24/7, delivery automatizado, captação de leads e mais.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        * { font-family: 'Inter', sans-serif; }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .pulse-border {
+            animation: pulse-border 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7); }
+            50% { box-shadow: 0 0 0 20px rgba(102, 126, 234, 0); }
+        }
+
+        .bio-link {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .bio-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .bio-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Header/Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <!-- Logo SVG -->
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="10" fill="url(#gradient)"/>
+                        <path d="M12 28V12H16V22.5L24 12H28V28H24V17.5L16 28H12Z" fill="white"/>
+                        <circle cx="30" cy="10" r="3" fill="#FFD700"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                                <stop offset="0%" stop-color="#667eea"/>
+                                <stop offset="100%" stop-color="#764ba2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div>
+                        <span class="text-lg font-bold gradient-text block leading-none">Jardel Guimarães</span>
+                        <span class="text-xs text-gray-500">JGAutomações.AI</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#servicos" class="text-gray-700 hover:text-purple-600 transition">Serviços</a>
+                    <a href="#beneficios" class="text-gray-700 hover:text-purple-600 transition">Benefícios</a>
+                    <a href="#contato" class="text-gray-700 hover:text-purple-600 transition">Contato</a>
+                </div>
+                <a href="https://wa.me/5537999351826?text=Olá!%20Quero%20automatizar%20meu%20negócio" target="_blank" class="gradient-bg text-white px-6 py-2 rounded-full hover:opacity-90 transition">
+                    💬 WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="mb-4">
+                        <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold">
+                            ✨ Especialista em Automações com IA
+                        </span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Automatize seu Negócio com <span class="text-yellow-300">Inteligência Artificial</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-purple-100">
+                        Sou Jardel Guimarães, e ajudo empresas a economizar tempo e aumentar vendas através de automações inteligentes para lojas, escritórios, restaurantes e mais.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/5537999351826?text=Olá%20Jardel!%20Quero%20automatizar%20meu%20negócio" target="_blank" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition text-center pulse-border">
+                            🚀 Falar com Jardel
+                        </a>
+                        <a href="#servicos" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition text-center">
+                            Ver Soluções
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4 text-sm text-purple-100">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <span>contato@jardelguimaraes.com.br</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating hidden md:block">
+                    <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+                        <div class="text-white space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-2xl">✓</div>
+                                <div>
+                                    <p class="font-semibold">Atendimento 24/7</p>
+                                    <p class="text-sm text-purple-200">WhatsApp, Instagram, Facebook</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-2xl">🏪</div>
+                                <div>
+                                    <p class="font-semibold">Para Lojas & Escritórios</p>
+                                    <p class="text-sm text-purple-200">Gestão completa automatizada</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-2xl">📱</div>
+                                <div>
+                                    <p class="font-semibold">Integração Apple/iPhone</p>
+                                    <p class="text-sm text-purple-200">Atalhos e automações iOS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Minhas <span class="gradient-text">Soluções</span></h2>
+                <p class="text-xl text-gray-600">Automações personalizadas para cada tipo de negócio</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-t-4 border-purple-600">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center text-3xl mb-6">💬</div>
+                    <h3 class="text-2xl font-bold mb-4">Atendimento Inteligente</h3>
+                    <p class="text-gray-600 mb-6">Chatbots com IA para WhatsApp, Instagram e Facebook. Atendimento humanizado 24/7 que converte.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Respostas instantâneas personalizadas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Qualificação automática de leads</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Integração com CRM e ferramentas</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-t-4 border-blue-600">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center text-3xl mb-6">🏪</div>
+                    <h3 class="text-2xl font-bold mb-4">Lojas & Varejo</h3>
+                    <p class="text-gray-600 mb-6">Automação completa para lojas físicas e online: atendimento, vendas, estoque e fidelização.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Catálogo digital automatizado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Controle de estoque inteligente</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Programa de fidelidade automático</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-t-4 border-indigo-600">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-2xl flex items-center justify-center text-3xl mb-6">🏢</div>
+                    <h3 class="text-2xl font-bold mb-4">Escritórios & Empresas</h3>
+                    <p class="text-gray-600 mb-6">Automatize processos administrativos, agendamentos, reuniões e comunicação interna.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Agendamento automático</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Gestão de documentos e processos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Comunicação interna otimizada</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-t-4 border-orange-600">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center text-3xl mb-6">🍔</div>
+                    <h3 class="text-2xl font-bold mb-4">Delivery & Restaurantes</h3>
+                    <p class="text-gray-600 mb-6">Sistema completo de pedidos, confirmações e acompanhamento para estabelecimentos.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Cardápio digital interativo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Confirmação e rastreamento</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Gestão de pedidos em tempo real</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-t-4 border-pink-600">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-700 rounded-2xl flex items-center justify-center text-3xl mb-6">📱</div>
+                    <h3 class="text-2xl font-bold mb-4">Automação Apple/iPhone</h3>
+                    <p class="text-gray-600 mb-6">Atalhos personalizados e automações iOS para otimizar sua rotina e produtividade.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Atalhos personalizados Siri</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Integração com apps empresariais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Automações baseadas em contexto</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-t-4 border-green-600">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center text-3xl mb-6">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4">Marketing & Leads</h3>
+                    <p class="text-gray-600 mb-6">Captação, qualificação e nutrição automática de leads. Landing pages e tráfego pago otimizado.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Landing pages de alta conversão</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Gestão de tráfego pago</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2">✓</span>
+                            <span>Follow-up automatizado</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section id="beneficios" class="bg-gradient-to-br from-purple-50 to-blue-50 py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Por que trabalhar <span class="gradient-text">comigo?</span></h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-4xl mx-auto mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-2">Rapidez</h3>
+                    <p class="text-gray-600">Implementação em até 7 dias</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-4xl mx-auto mb-4">💰</div>
+                    <h3 class="text-xl font-bold mb-2">Economia</h3>
+                    <p class="text-gray-600">Reduza custos operacionais em até 70%</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-4xl mx-auto mb-4">📈</div>
+                    <h3 class="text-xl font-bold mb-2">Resultados</h3>
+                    <p class="text-gray-600">Aumento de até 300% em conversões</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-4xl mx-auto mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold mb-2">Suporte</h3>
+                    <p class="text-gray-600">Acompanhamento contínuo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA/Contato -->
+    <section id="contato" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="gradient-bg rounded-3xl p-12 text-center text-white">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Pronto para Automatizar?</h2>
+                <p class="text-xl mb-8 text-purple-100">Agende uma conversa gratuita comigo e descubra como posso transformar seu negócio</p>
+                
+                <form class="max-w-2xl mx-auto space-y-4" onsubmit="handleSubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" name="nome" placeholder="Seu Nome" required class="px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-purple-300">
+                        <input type="email" name="email" placeholder="Seu E-mail" required class="px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-purple-300">
+                    </div>
+                    <input type="tel" name="whatsapp" placeholder="WhatsApp (com DDD)" required class="w-full px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-purple-300">
+                    <select name="servico" required class="w-full px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-purple-300">
+                        <option value="">Qual solução te interessa?</option>
+                        <option value="atendimento">Atendimento Inteligente</option>
+                        <option value="loja">Automação para Loja/Varejo</option>
+                        <option value="escritorio">Automação para Escritório</option>
+                        <option value="delivery">Delivery Automatizado</option>
+                        <option value="apple">Automação Apple/iPhone</option>
+                        <option value="marketing">Marketing & Captação de Leads</option>
+                        <option value="site">Site/Landing Page</option>
+                        <option value="completo">Pacote Completo</option>
+                    </select>
+                    <button type="submit" class="w-full bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition">
+                        🚀 Falar com Jardel Agora
+                    </button>
+                </form>
+                
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/5537999351826?text=Olá%20Jardel!%20Quero%20automatizar%20meu%20negócio" target="_blank" class="bg-green-500 hover:bg-green-600 px-8 py-3 rounded-full transition font-semibold">
+                        💬 WhatsApp: (37) 99935-1826
+                    </a>
+                    <a href="mailto:contato@jardelguimaraes.com.br" class="bg-blue-500 hover:bg-blue-600 px-8 py-3 rounded-full transition font-semibold">
+                        📧 contato@jardelguimaraes.com.br
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="flex justify-center mb-4">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                    <rect width="60" height="60" rx="15" fill="url(#footerGradient)"/>
+                    <path d="M18 42V18H24V33.75L36 18H42V42H36V26.25L24 42H18Z" fill="white"/>
+                    <circle cx="45" cy="15" r="4.5" fill="#FFD700"/>
+                    <defs>
+                        <linearGradient id="footerGradient" x1="0" y1="0" x2="60" y2="60">
+                            <stop offset="0%" stop-color="#667eea"/>
+                            <stop offset="100%" stop-color="#764ba2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <h3 class="text-3xl font-bold mb-2">Jardel Guimarães</h3>
+            <p class="text-lg gradient-text font-semibold mb-4">JGAutomações.AI</p>
+            <p class="text-gray-400 mb-6">Transformando negócios com inteligência artificial</p>
+            <div class="flex flex-wrap justify-center gap-6 mb-6">
+                <a href="https://www.instagram.com/jgautomacao.ai" target="_blank" class="hover:text-purple-400 transition">Instagram</a>
+                <a href="https://wa.me/5537999351826" target="_blank" class="hover:text-purple-400 transition">WhatsApp</a>
+                <a href="mailto:contato@jardelguimaraes.com.br" class="hover:text-purple-400 transition">E-mail</a>
+                <a href="#servicos" class="hover:text-purple-400 transition">Serviços</a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2025 Jardel Guimarães - JGAutomações.AI</p>
+            <p class="text-gray-600 text-xs mt-2">
+                WhatsApp: (37) 99935-1826 | E-mail: contato@jardelguimaraes.com.br
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Integração futura com N8N
+            // const webhookUrl = 'https://jardelguimaraes.com.br/webhook/leads';
+            
+            // Redireciona para WhatsApp com dados preenchidos
+            const mensagem = `Olá Jardel! Vim do site jardelguimaraes.com.br
+
+📋 Meus dados:
+Nome: ${data.nome}
+Email: ${data.email}
+WhatsApp: ${data.whatsapp}
+Interesse: ${data.servico}
+
+Gostaria de saber mais sobre suas automações!`;
+            
+            const whatsappUrl = `https://wa.me/5537999351826?text=${encodeURIComponent(mensagem)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            alert('Redirecionando para o WhatsApp do Jardel! 🚀');
+            event.target.reset();
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
