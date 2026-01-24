@@ -6,65 +6,8 @@
     <title>Jardel Guimarães - Automações com IA | JGAutomações.AI</title>
     <meta name="description" content="Especialista em automações inteligentes para empresas. Atendimento 24/7, delivery automatizado, captação de leads e mais.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        
-        * { font-family: 'Inter', sans-serif; }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .pulse-border {
-            animation: pulse-border 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-border {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7); }
-            50% { box-shadow: 0 0 0 20px rgba(102, 126, 234, 0); }
-        }
-
-        .bio-link {
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .bio-link:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-        }
-
-        .bio-page {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        <link rel="icon" type="image/png" href="img/logojg.png">
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logojg.png">
 </head>
 <body class="bg-gray-50">
     
@@ -74,8 +17,8 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
                     <!-- Logo Oficial -->
-                    <img src="img/logojg.png" alt="JGAutomações.AI Logo" width="45" height="45" class="object-contain"/>
-                    <div>
+                    <img src="img/logojg.png" alt="JGAutomações.AI Logo" class="logo object-contain"/>
+                    <div class="text-center">
                         <span class="text-lg font-bold gradient-text block leading-none">Jardel Guimarães</span>
                         <span class="text-xs text-gray-500">JGAutomações.AI</span>
                     </div>
@@ -430,4 +373,3 @@ Gostaria de saber mais sobre suas automações!`;
     </script>
 </body>
 </html>
-
