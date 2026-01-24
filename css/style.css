@@ -190,8 +190,6 @@ main {
     gap: 1rem;
 }
 
-.navbar-button { display: none; } /* Oculto por padrão */
-
 .navbar-toggler {
     background: none;
     border: none;
@@ -604,6 +602,34 @@ main {
 }
 
 
+/* --- WHATSAPP FAB --- */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-fab:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+}
+
+
 /* --- MEDIA QUERIES --- */
 
 /* Tablet (e.g., iPads) */
@@ -611,8 +637,7 @@ main {
     .section-title { font-size: 2.75rem; }
     
     .navbar-toggler, .mobile-menu { display: none; }
-    .navbar-menu, .navbar-button { display: flex; }
-    .navbar-menu { gap: 2rem; }
+    .navbar-menu { display: flex; gap: 2rem; }
 
     .hero { text-align: left; }
     .hero-grid { grid-template-columns: 1fr 1fr; }
@@ -631,3 +656,13 @@ main {
     .cta-title { font-size: 2.5rem; }
 }
 
+/* Desktop */
+@media (min-width: 1024px) {
+    .section-title { font-size: 3rem; }
+    .navbar-menu { gap: 2.5rem; }
+    
+    .hero-title { font-size: 3.75rem; }
+    
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    .benefits-grid { grid-template-columns: repeat(4, 1fr); }
+}
