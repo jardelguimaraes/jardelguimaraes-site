@@ -633,11 +633,4 @@ main {
 
 /* Desktop */
 @media (min-width: 1024px) {
-    .section-title { font-size: 3rem; }
-    .navbar-menu { gap: 2.5rem; }
-    
-    .hero-title { font-size: 3.75rem; }
-    
-    .services-grid { grid-template-columns: repeat(3, 1fr); }
-    .benefits-grid { grid-template-columns: repeat(4, 1fr); }
-}
+    /* LINHA DE TESTE
