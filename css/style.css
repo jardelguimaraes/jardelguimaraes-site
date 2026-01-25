@@ -497,8 +497,9 @@ main {
     border-radius: 9999px;
     border: none;
     font-size: 1rem;
-    color: var(--gray-800);
+    color: var(--gray-900);
 }
+
 .form-input::placeholder { color: var(--gray-500); }
 .form-input:focus {
     outline: none;
