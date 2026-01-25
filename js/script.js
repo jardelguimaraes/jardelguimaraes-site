@@ -43,6 +43,29 @@ Interesse: ${data.servico}
 Gostaria de saber mais sobre suas automações!`;
     
     const whatsappUrl = `https://wa.me/5537999351826?text=${encodeURIComponent(mensagem)}`;
+
+
+    // Adicionar animação ao scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.service-card, .benefit-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s ease';
+    observer.observe(el);
+});
     window.open(whatsappUrl, '_blank');
     
     alert('Redirecionando para o WhatsApp! 🚀');
