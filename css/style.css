@@ -629,6 +629,19 @@ main {
     fill: #fff;
 }
 
+.whatsapp-fab {
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8);
+    }
+}
+
 
 /* --- MEDIA QUERIES --- */
 
