@@ -48,7 +48,9 @@ document.querySelectorAll('.service-card, .benefit-item').forEach(el => {
     observer.observe(el);
 });
 
-// Função do formulário - SUBSTITUA A ANTIGA POR ESTA
+// ... (mantenha o código de Navbar e Scroll acima)
+
+// Função do formulário corrigida para JGAutomações.AI
 document.getElementById('leadForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -61,6 +63,7 @@ document.getElementById('leadForm').addEventListener('submit', function(event) {
     btn.innerHTML = "⌛ Processando sua solicitação...";
     btn.disabled = true;
 
+    // 1️⃣ ENVIAR PARA N8N (Webhook de Produção)
     fetch('https://webhook.jg.jardelguimaraes.com.br/webhook/leads-jg', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -75,9 +78,19 @@ document.getElementById('leadForm').addEventListener('submit', function(event) {
     })
     .then(response => {
         if (response.ok) {
-            // Esconde o botão e mostra a mensagem de sucesso
+            // Sucesso: Esconde botão e mostra mensagem
             btn.style.display = 'none';
             successMsg.style.display = 'block';
+            
+            // 2️⃣ REDIRECIONAMENTO OPCIONAL (Apenas após o sucesso do n8n)
+            const mensagem = `Olá Jardel! Acabei de enviar meus dados pelo site.\n\nNome: ${data.nome}\nInteresse: ${data.servico}`;
+            const whatsappUrl = `https://wa.me/5537999351826?text=${encodeURIComponent(mensagem)}`;
+            
+            // Abre o Zap em nova aba após 2 segundos para dar tempo do lead ler o sucesso
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 2000);
+
             event.target.reset();
         } else {
             throw new Error('Erro no servidor');
@@ -89,22 +102,3 @@ document.getElementById('leadForm').addEventListener('submit', function(event) {
         btn.disabled = false;
     });
 });
-    
-    // 2️⃣ REDIRECIONAR PARA WHATSAPP (mantém comportamento atual)
-    const mensagem = `Olá Jardel! Vim do site jardelguimaraes.com.br
-
-📋 Meus dados:
-Nome: ${data.nome}
-Email: ${data.email}
-WhatsApp: ${data.whatsapp}
-Interesse: ${data.servico}
-
-Gostaria de saber mais sobre suas automações!`;
-    
-    const whatsappUrl = `https://wa.me/5537999351826?text=${encodeURIComponent(mensagem)}`;
-    
-    // 3️⃣ ABRIR WHATSAPP E LIMPAR FORMULÁRIO
-    window.open(whatsappUrl, '_blank');
-    alert('✅ Dados enviados! Redirecionando para o WhatsApp 🚀');
-    event.target.reset();
-}
