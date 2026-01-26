@@ -49,17 +49,21 @@ document.querySelectorAll('.service-card, .benefit-item').forEach(el => {
 });
 
 // Função do formulário - SUBSTITUA A ANTIGA POR ESTA
-function handleSubmit(event) {
+document.getElementById('leadForm').addEventListener('submit', function(event) {
     event.preventDefault();
+    
+    const btn = document.getElementById('btnSubmit');
+    const successMsg = document.getElementById('successMessage');
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
     
-    // 1️⃣ ENVIAR PARA N8N (Webhook)
+    // Feedback visual imediato
+    btn.innerHTML = "⌛ Processando sua solicitação...";
+    btn.disabled = true;
+
     fetch('https://webhook.jg.jardelguimaraes.com.br/webhook/leads-jg', {
         method: 'POST',
-        headers: { 
-            'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             nome: data.nome,
             email: data.email,
@@ -69,13 +73,22 @@ function handleSubmit(event) {
             timestamp: new Date().toISOString()
         })
     })
-    .then(response => response.json())
-    .then(result => {
-        console.log('Lead enviado para N8N:', result);
+    .then(response => {
+        if (response.ok) {
+            // Esconde o botão e mostra a mensagem de sucesso
+            btn.style.display = 'none';
+            successMsg.style.display = 'block';
+            event.target.reset();
+        } else {
+            throw new Error('Erro no servidor');
+        }
     })
     .catch(error => {
-        console.error('Erro ao enviar lead:', error);
+        console.error('Erro:', error);
+        btn.innerHTML = "❌ Erro ao enviar. Tente novamente.";
+        btn.disabled = false;
     });
+});
     
     // 2️⃣ REDIRECIONAR PARA WHATSAPP (mantém comportamento atual)
     const mensagem = `Olá Jardel! Vim do site jardelguimaraes.com.br
