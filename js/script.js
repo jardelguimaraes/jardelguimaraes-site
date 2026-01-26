@@ -48,12 +48,36 @@ document.querySelectorAll('.service-card, .benefit-item').forEach(el => {
     observer.observe(el);
 });
 
-// Função do formulário
+// Função do formulário - SUBSTITUA A ANTIGA POR ESTA
 function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
     
+    // 1️⃣ ENVIAR PARA N8N (Webhook)
+    fetch('https://SUA-VPS.com:5678/webhook/leads-jg', {
+        method: 'POST',
+        headers: { 
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            nome: data.nome,
+            email: data.email,
+            whatsapp: data.whatsapp,
+            servico: data.servico,
+            origem: 'Site - Formulário',
+            timestamp: new Date().toISOString()
+        })
+    })
+    .then(response => response.json())
+    .then(result => {
+        console.log('Lead enviado para N8N:', result);
+    })
+    .catch(error => {
+        console.error('Erro ao enviar lead:', error);
+    });
+    
+    // 2️⃣ REDIRECIONAR PARA WHATSAPP (mantém comportamento atual)
     const mensagem = `Olá Jardel! Vim do site jardelguimaraes.com.br
 
 📋 Meus dados:
@@ -66,8 +90,8 @@ Gostaria de saber mais sobre suas automações!`;
     
     const whatsappUrl = `https://wa.me/5537999351826?text=${encodeURIComponent(mensagem)}`;
     
+    // 3️⃣ ABRIR WHATSAPP E LIMPAR FORMULÁRIO
     window.open(whatsappUrl, '_blank');
-    
-    alert('Redirecionando para o WhatsApp! 🚀');
+    alert('✅ Dados enviados! Redirecionando para o WhatsApp 🚀');
     event.target.reset();
 }
