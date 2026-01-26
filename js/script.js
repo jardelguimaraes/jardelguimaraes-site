@@ -80,17 +80,7 @@ document.getElementById('leadForm').addEventListener('submit', function(event) {
         if (response.ok) {
             // Sucesso: Esconde botão e mostra mensagem
             btn.style.display = 'none';
-            successMsg.style.display = 'block';
-            
-            // 2️⃣ REDIRECIONAMENTO OPCIONAL (Apenas após o sucesso do n8n)
-            const mensagem = `Olá Jardel! Acabei de enviar meus dados pelo site.\n\nNome: ${data.nome}\nInteresse: ${data.servico}`;
-            const whatsappUrl = `https://wa.me/5537999351826?text=${encodeURIComponent(mensagem)}`;
-            
-            // Abre o Zap em nova aba após 2 segundos para dar tempo do lead ler o sucesso
-            setTimeout(() => {
-                window.open(whatsappUrl, '_blank');
-            }, 2000);
-
+            successMsg.style.display = 'block';              
             event.target.reset();
         } else {
             throw new Error('Erro no servidor');
