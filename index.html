@@ -216,60 +216,50 @@
 
         <!-- CTA/Contato -->
         <section id="contato" class="cta">
-            <div class="container cta-container">
-                <div class="cta-box gradient-bg">
-                    <h2 class="cta-title">Pronto para Automatizar?</h2>
-                    <p class="cta-subtitle">Agende uma conversa gratuita e descubra como posso transformar seu negócio.</p>
-                    
-                <form class="cta-form" id="leadForm">
-                    <div class="form-grid">
-                        <input type="text" name="nome" placeholder="Seu Nome" required class="form-input">
-                        <input type="email" name="email" placeholder="Seu E-mail" required class="form-input">
-                    </div>
-                    <input type="tel" name="whatsapp" placeholder="WhatsApp (com DDD)" required class="form-input">
-                    <select name="servico" required class="form-input">
-                        <option value="">Qual solução te interessa?</option>
-                        <option value="atendimento">Atendimento Inteligente</option>
-                        <option value="loja">Automação para Loja/Varejo</option>
-                        <option value="escritorio">Automação para Escritório</option>
-                        <option value="delivery">Delivery Automatizado</option>
-                        <option value="apple">Automação Apple/iPhone</option>
-                        <option value="marketing">Marketing & Captação de Leads</option>
-                        <option value="site">Site/Landing Page</option>
-                        <option value="completo">Pacote Completo</option>
-                    </select>
-                    <button type="submit" id="btnSubmit" class="button button-form">
-                        🚀 Quero falar com o Jardel
-                    </button>
-                    <div id="successMessage" style="display:none; color: #4ADE80; margin-top: 15px; font-weight: bold; text-align: center;">
-                        ✅ Recebido! Em instantes nosso assistente te chamará no WhatsApp.
-                    </div>
-                </form>
-                    
-                    <div class="cta-links">
-                        <a href="https://wa.me/5537999351826?text=Olá%20Jardel!%20Quero%20automatizar%20meu%20negócio" target="_blank" class="cta-link-button" style="background-color: #22C55E;">
-                            💬 WhatsApp: (37) 99935-1826
-                        </a>
-                        <a href="mailto:contato@jardelguimaraes.com.br" class="cta-link-button" style="background-color: #3B82F6;">
-                            📧 contato@jardelguimaraes.com.br
-                        </a>
-                    </div>
+    <div class="container cta-container">
+        <div class="cta-box gradient-bg">
+            <h2 class="cta-title">Pronto para Automatizar?</h2>
+            <p class="cta-subtitle">Agende uma conversa gratuita e descubra como posso transformar seu negócio.</p>
+            
+            <form class="cta-form" id="leadForm">
+                <div class="form-grid">
+                    <input type="text" name="nome" placeholder="Seu Nome" required class="form-input" autocomplete="name">
+                    <input type="email" name="email" placeholder="Seu E-mail" required class="form-input" autocomplete="email">
                 </div>
+                <input type="tel" name="whatsapp" placeholder="WhatsApp (com DDD)" required class="form-input" autocomplete="tel">
+                
+                <select name="servico" required class="form-input">
+                    <option value="">Qual solução te interessa?</option>
+                    <option value="atendimento">Atendimento Inteligente</option>
+                    <option value="loja">Automação para Loja/Varejo</option>
+                    <option value="escritorio">Automação para Escritório</option>
+                    <option value="delivery">Delivery Automatizado</option>
+                    <option value="apple">Automação Apple/iPhone</option>
+                    <option value="marketing">Marketing & Captação de Leads</option>
+                    <option value="site">Site/Landing Page</option>
+                    <option value="completo">Pacote Completo</option>
+                </select>
+                <button type="submit" id="btnSubmit" class="button button-form">
+                    🚀 Quero falar com o Jardel
+                </button>
+                <div id="successMessage" style="display:none; color: #4ADE80; margin-top: 15px; font-weight: bold; text-align: center;">
+                    ✅ Recebido! Em instantes nosso assistente te chamará no WhatsApp.
+                </div>
+            </form>
+            
+            <div class="cta-links">
+                <a href="https://wa.me/5537999351826?text=Olá%20Jardel!%20Quero%20automatizar%20meu%20negócio" target="_blank" class="cta-link-button" style="background-color: #22C55E;">
+                    💬 WhatsApp: (37) 99935-1826
+                </a>
+                <a href="mailto:contato@jardelguimaraes.com.br" class="cta-link-button" style="background-color: #3B82F6;">
+                    📧 contato@jardelguimaraes.com.br
+                </a>
             </div>
-        </section>
-    </main>
-
-    <form class="cta-form" id="leadForm">
-    <div class="form-grid">
-        <input type="text" name="nome" placeholder="Seu Nome" required class="form-input" autocomplete="name">
-        
-        <input type="email" name="email" placeholder="Seu E-mail" required class="form-input" autocomplete="email">
+        </div>
     </div>
-    
-    <input type="tel" name="whatsapp" placeholder="WhatsApp (com DDD)" required class="form-input" autocomplete="tel">
-    
-    </form>
+</section>
 
+    </main>
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
@@ -306,6 +296,7 @@
   gtag('config', 'G-XXXXXXXXXX');
 </script>
 </body>
+
 
 
 
