@@ -55,7 +55,7 @@ function handleSubmit(event) {
     const data = Object.fromEntries(formData);
     
     // 1️⃣ ENVIAR PARA N8N (Webhook)
-    fetch('https://SUA-VPS.com:5678/webhook/leads-jg', {
+    fetch('https://webhook.jg.jardelguimaraes.com.br/webhook/leads-jg', {
         method: 'POST',
         headers: { 
             'Content-Type': 'application/json'
