@@ -88,7 +88,7 @@ document.getElementById('leadForm').addEventListener('submit', function(event) {
     })
     .catch(error => {
         console.error('Erro:', error);
-        btn.innerHTML = "❌ Erro ao enviar. Tente novamente.";
+        btn.innerHTML = "Ops! Houve um erro. Por favor, tente novamente ou entre em contato via WhatsApp (37) 99935-1826";
         btn.disabled = false;
     });
 });
