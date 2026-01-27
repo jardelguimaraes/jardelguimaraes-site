@@ -140,22 +140,10 @@ main {
     text-decoration: none;
 }
 
-/* --- Ajuste da Logo --- */
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    text-decoration: none;
-}
-
-/* Esta classe controla a imagem da logo diretamente */
 .logo {
-    height: auto;           /* Mantém a proporção */
-    width: 200px;           /* Aumentei para 200px para dar mais presença */
-    max-height: 75px;       /* Limite para não quebrar a altura do menu */
-    object-fit: contain;    /* Garante que a imagem não distorça */
-    background: transparent !important; 
-    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
 }
 
 /* Ajuste no container para centralizar verticalmente */
