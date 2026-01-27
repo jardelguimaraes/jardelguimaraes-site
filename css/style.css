@@ -146,6 +146,19 @@ main {
     object-fit: contain;
 }
 
+/* Selecionando a classe da sua logo */
+.logo-header {
+    height: auto;           /* Mantém a proporção */
+    width: 180px;           /* Aumente este valor conforme desejar */
+    max-height: 80px;       /* Evita que o cabeçalho fique gigante no mobile */
+    background: transparent !important; /* Força a remoção de qualquer fundo */
+    display: block;
+}
+
+/* Ajuste para o container (pai da logo) */
+.header-container {
+    padding: 10px 0;        /* Dá "respiro" para a logo aparecer mais */
+}
 
 .brand-text {
     text-align: center;
