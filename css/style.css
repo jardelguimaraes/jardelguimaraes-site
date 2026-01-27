@@ -140,24 +140,35 @@ main {
     text-decoration: none;
 }
 
-.logo {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;
+/* --- Ajuste da Logo --- */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
 }
 
-/* Selecionando a classe da sua logo */
-.logo-header {
+/* Esta classe controla a imagem da logo diretamente */
+.logo {
     height: auto;           /* Mantém a proporção */
-    width: 180px;           /* Aumente este valor conforme desejar */
-    max-height: 80px;       /* Evita que o cabeçalho fique gigante no mobile */
-    background: transparent !important; /* Força a remoção de qualquer fundo */
+    width: 200px;           /* Aumentei para 200px para dar mais presença */
+    max-height: 75px;       /* Limite para não quebrar a altura do menu */
+    object-fit: contain;    /* Garante que a imagem não distorça */
+    background: transparent !important; 
     display: block;
 }
 
-/* Ajuste para o container (pai da logo) */
-.header-container {
-    padding: 10px 0;        /* Dá "respiro" para a logo aparecer mais */
+/* Ajuste no container para centralizar verticalmente */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;          /* Aumentei de 88px para 100px para a logo "respirar" */
+}
+
+/* Removemos o padding fixo do main para acompanhar a nova altura do navbar */
+main {
+    padding-top: 100px; 
 }
 
 .brand-text {
