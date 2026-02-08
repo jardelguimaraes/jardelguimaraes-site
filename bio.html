@@ -6,213 +6,77 @@
     <title>@jgautomacao.ai - Links | Jardel Guimarães</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        
-        * { 
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { 
             font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
-        
         .bio-link {
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
             transform: translateY(0);
         }
-        
         .bio-link:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
         }
-
         .profile-img {
             animation: float 3s ease-in-out infinite;
         }
-
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-8px); }
         }
-
-        .gradient-border {
-            position: relative;
-            background: white;
-            border-radius: 9999px;
-            padding: 3px;
-        }
-
-        .gradient-border::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 9999px;
-            padding: 3px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-        }
-
-        .shine {
-            animation: shine 2s ease-in-out infinite;
-        }
-
-        @keyframes shine {
-            0%, 100% { opacity: 0.8; }
-            50% { opacity: 1; }
-        }
-        <link rel="icon" type="image/png" href="img/logojg.png">
     </style>
+    <link rel="icon" type="image/png" href="img/logojg.png">
 </head>
-<body>
-    <div class="max-w-2xl mx-auto">
+<body class="flex items-center justify-center">
+    <div class="max-w-md mx-auto w-full">
         <!-- Profile Section -->
         <div class="text-center mb-8">
-            <div class="gradient-border inline-block mb-4 profile-img">
-                <img src="img/logojg.png" alt="JGAutomações.AI Logo" class="w-28 h-28 rounded-full object-cover bg-white p-2"/>
-            </div>
-            <h1 class="text-3xl font-bold text-white mb-2">Jardel Guimarães</h1>
-            <p class="text-purple-100 mb-1 font-semibold">@jgautomacao.ai</p>
-            <p class="text-purple-200 text-sm">🤖 Especialista em Automações com IA</p>
-            <p class="text-purple-200 text-sm">✨ Transformando negócios desde 2025</p>
+            <img src="img/logojg.png" alt="JGAutomações.AI Logo" class="w-24 h-24 rounded-full object-cover bg-white p-1 mx-auto mb-4 profile-img shadow-lg"/>
+            <h1 class="text-2xl font-bold text-white">Jardel Guimarães</h1>
+            <p class="text-purple-200 mt-1">🚀 Automações com IA para negócios reais</p>
+            <p class="text-purple-200 text-sm">Menos tarefas manuais. Mais resultado.</p>
         </div>
 
         <!-- Links -->
         <div class="space-y-4">
-            <!-- WhatsApp -->
-            <a href="https://wa.me/5537999351826?text=Olá%20Jardel!%20Vim%20do%20Instagram%20@jgautomacao.ai" 
+            <!-- 1. BOTÃO PRINCIPAL (CTA) -->
+            <a href="https://wa.me/5537999351826?text=Olá%20Jardel!%20Vim%20do%20seu%20Instagram%20e%20quero%20automatizar%20meu%20negócio." 
                target="_blank"
-               class="bio-link block bg-gradient-to-r from-green-400 to-green-600 text-white p-5 rounded-2xl text-center font-bold text-lg shadow-xl">
-                <div class="flex items-center justify-center gap-3">
-                    <span class="text-2xl">💬</span>
-                    <span>Fale Comigo no WhatsApp</span>
-                </div>
-                <p class="text-sm mt-1 opacity-90">(37) 99935-1826</p>
+               class="bio-link block bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-lg text-center font-bold shadow-xl">
+                <span>🟢 Falar no WhatsApp</span>
+                <p class="text-sm font-normal mt-1 opacity-90">Entenda como automatizar seu negócio</p>
             </a>
 
-            <!-- Automações -->
+            <!-- 2. SOLUÇÕES -->
             <a href="https://jardelguimaraes.com.br#servicos" 
                target="_blank"
-               class="bio-link block bg-gradient-to-r from-purple-400 to-purple-600 text-white p-5 rounded-2xl text-center font-bold text-lg shadow-xl">
-                <div class="flex items-center justify-center gap-3">
-                    <span class="text-2xl">🤖</span>
-                    <span>Conheça Minhas Automações</span>
-                </div>
-                <p class="text-sm mt-1 opacity-90">Lojas, Escritórios, Delivery e mais</p>
+               class="bio-link block bg-white/20 backdrop-blur-lg border border-white/30 text-white p-4 rounded-lg text-center font-bold shadow-lg">
+               ⚙️ Soluções de Automação
             </a>
 
-            <!-- Consulta Gratuita -->
-            <a href="https://wa.me/5537999351826?text=Olá%20Jardel!%20Quero%20agendar%20uma%20consulta%20gratuita%20sobre%20automações" 
-               target="_blank"
-               class="bio-link block bg-gradient-to-r from-blue-400 to-blue-600 text-white p-5 rounded-2xl text-center font-bold text-lg shadow-xl shine">
-                <div class="flex items-center justify-center gap-3">
-                    <span class="text-2xl">🚀</span>
-                    <span>Consulta Gratuita</span>
-                </div>
-                <p class="text-sm mt-1 opacity-90">Descubra como automatizar seu negócio</p>
-            </a>
-
-            <!-- Portfolio/Cases -->
-            <a href="https://jardelguimaraes.com.br#beneficios" 
-               target="_blank"
-               class="bio-link block bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-5 rounded-2xl text-center font-bold text-lg shadow-xl">
-                <div class="flex items-center justify-center gap-3">
-                    <span class="text-2xl">📊</span>
-                    <span>Resultados & Benefícios</span>
-                </div>
-                <p class="text-sm mt-1 opacity-90">Veja o impacto das automações</p>
-            </a>
-
-            <!-- Automação Apple -->
-            <a href="https://wa.me/5537999351826?text=Olá%20Jardel!%20Quero%20saber%20sobre%20automação%20Apple/iPhone" 
-               target="_blank"
-               class="bio-link block bg-gradient-to-r from-gray-700 to-gray-900 text-white p-5 rounded-2xl text-center font-bold text-lg shadow-xl">
-                <div class="flex items-center justify-center gap-3">
-                    <span class="text-2xl">📱</span>
-                    <span>Automação Apple/iPhone</span>
-                </div>
-                <p class="text-sm mt-1 opacity-90">Atalhos Siri e integrações iOS</p>
-            </a>
-
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/jgautomacao.ai" 
-               target="_blank"
-               class="bio-link block bg-gradient-to-r from-pink-400 via-pink-500 to-purple-500 text-white p-5 rounded-2xl text-center font-bold text-lg shadow-xl">
-                <div class="flex items-center justify-center gap-3">
-                    <span class="text-2xl">📸</span>
-                    <span>Siga no Instagram</span>
-                </div>
-                <p class="text-sm mt-1 opacity-90">Dicas e conteúdos sobre automação</p>
-            </a>
-
-            <!-- Email -->
-            <a href="mailto:contato@jardelguimaraes.com.br" 
-               class="bio-link block bg-gradient-to-r from-indigo-400 to-indigo-600 text-white p-5 rounded-2xl text-center font-bold text-lg shadow-xl">
-                <div class="flex items-center justify-center gap-3">
-                    <span class="text-2xl">📧</span>
-                    <span>Enviar E-mail</span>
-                </div>
-                <p class="text-sm mt-1 opacity-90">contato@jardelguimaraes.com.br</p>
-            </a>
-
-            <!-- Site Completo -->
+            <!-- 3. JGAUTOMAÇÕES.AI (INSTITUCIONAL) -->
             <a href="https://jardelguimaraes.com.br" 
                target="_blank"
-               class="bio-link block bg-white/20 backdrop-blur-lg border-2 border-white/30 text-white p-5 rounded-2xl text-center font-bold text-lg shadow-xl">
-                <div class="flex items-center justify-center gap-3">
-                    <span class="text-2xl">🌐</span>
-                    <span>Visite Meu Site</span>
-                </div>
-                <p class="text-sm mt-1 opacity-90">jardelguimaraes.com.br</p>
+               class="bio-link block bg-white/20 backdrop-blur-lg border border-white/30 text-white p-4 rounded-lg text-center font-bold shadow-lg">
+                🚀 JGAutomações.AI (site)
+            </a>
+
+            <!-- 4. PROVA / AUTORIDADE -->
+            <a href="https://jardelguimaraes.com.br#beneficios" 
+               target="_blank"
+               class="bio-link block bg-white/20 backdrop-blur-lg border border-white/30 text-white p-4 rounded-lg text-center font-bold shadow-lg">
+                📊 Projetos e Bastidores
             </a>
         </div>
 
         <!-- Footer -->
         <div class="mt-8 text-center">
-            <p class="text-white/80 text-sm mb-2">💡 Automatize seu negócio com IA</p>
-            <div class="flex justify-center gap-4 text-xs text-white/60">
-                <span>✨ JGAutomações.AI</span>
-                <span>•</span>
-                <span>🚀 Soluções Inteligentes</span>
-            </div>
-            <p class="text-white/40 text-xs mt-4">© 2025 Jardel Guimarães</p>
-        </div>
-
-        <!-- Stats (opcional - pode remover se não quiser) -->
-        <div class="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-            <div class="grid grid-cols-3 gap-4 text-center text-white">
-                <div>
-                    <p class="text-2xl font-bold">24/7</p>
-                    <p class="text-xs text-purple-200">Atendimento</p>
-                </div>
-                <div>
-                    <p class="text-2xl font-bold">70%</p>
-                    <p class="text-xs text-purple-200">Economia</p>
-                </div>
-                <div>
-                    <p class="text-2xl font-bold">7 dias</p>
-                    <p class="text-xs text-purple-200">Implementação</p>
-                </div>
-            </div>
+            <p class="text-white/60 text-xs">© 2025 Jardel Guimarães - JGAutomações.AI</p>
         </div>
     </div>
-
-    <script>
-        // Tracking de cliques (opcional - para analytics futuro)
-        document.querySelectorAll('.bio-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                const linkText = this.querySelector('span:last-child').textContent;
-                console.log('Clique em:', linkText);
-                // Aqui você pode integrar com Google Analytics ou fazer POST para N8N
-            });
-        });
-    </script>
 </body>
 </html>
-

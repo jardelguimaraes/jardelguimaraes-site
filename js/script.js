@@ -26,26 +26,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Função do formulário (já está no HTML)
-function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-    
-    const mensagem = `Olá Jardel! Vim do site jardelguimaraes.com.br
-
-📋 Meus dados:
-Nome: ${data.nome}
-Email: ${data.email}
-WhatsApp: ${data.whatsapp}
-Interesse: ${data.servico}
-
-Gostaria de saber mais sobre suas automações!`;
-    
-    const whatsappUrl = `https://wa.me/5537999351826?text=${encodeURIComponent(mensagem)}`;
-
-
-    // Adicionar animação ao scroll
+// Adicionar animação ao scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -66,6 +47,25 @@ document.querySelectorAll('.service-card, .benefit-item').forEach(el => {
     el.style.transition = 'all 0.6s ease';
     observer.observe(el);
 });
+
+// Função do formulário
+function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    
+    const mensagem = `Olá Jardel! Vim do site jardelguimaraes.com.br
+
+📋 Meus dados:
+Nome: ${data.nome}
+Email: ${data.email}
+WhatsApp: ${data.whatsapp}
+Interesse: ${data.servico}
+
+Gostaria de saber mais sobre suas automações!`;
+    
+    const whatsappUrl = `https://wa.me/5537999351826?text=${encodeURIComponent(mensagem)}`;
+    
     window.open(whatsappUrl, '_blank');
     
     alert('Redirecionando para o WhatsApp! 🚀');
