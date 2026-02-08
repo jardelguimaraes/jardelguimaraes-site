@@ -27,6 +27,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 17px; /* Aumento da fonte base para escalar o site */
 }
 
 body {
