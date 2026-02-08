@@ -13,6 +13,8 @@
     --purple-100: #E9D5FF;
     --purple-200: #D8B4FE;
     --yellow-300: #FBBF24;
+    --cta-green: #10B981;
+    --cta-green-hover: #059669;
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
     --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
     --shadow-lg: 0 10px 20px rgba(0,0,0,0.1);
@@ -27,7 +29,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 17px; /* Aumento da fonte base para escalar o site */
+    font-size: 17px;
 }
 
 body {
@@ -36,7 +38,7 @@ body {
 }
 
 main {
-    padding-top: 88px; /* Offset for fixed navbar */
+    padding-top: 88px;
 }
 
 .container {
@@ -68,11 +70,16 @@ main {
 }
 
 .button-primary {
-    background-color: #fff;
-    color: var(--purple-600);
+    background-color: var(--cta-green);
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 1.5rem 2.5rem;
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
 }
 .button-primary:hover {
-    background-color: #F3F4F6;
+    background-color: var(--cta-green-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.5);
 }
 
 .button-secondary {
@@ -90,13 +97,6 @@ main {
 @keyframes floating {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
-}
-
-.pulse-border { animation: pulse 2s infinite; }
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
-    70% { box-shadow: 0 0 0 12px rgba(139, 92, 246, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
 }
 
 /* --- SEÇÕES HEADER --- */
@@ -163,7 +163,7 @@ main {
     color: var(--gray-500);
 }
 
-.navbar-menu { display: none; } /* Oculto por padrão */
+.navbar-menu { display: none; }
 
 .navbar-link {
     color: var(--gray-700);
@@ -261,7 +261,7 @@ main {
 }
 
 .hero-title {
-    font-size: 3.15rem; /* Aumentado em 15% */
+    font-size: 3.6rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -286,12 +286,6 @@ main {
     justify-content: center;
 }
 
-.hero-buttons .button-primary {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    font-size: 1.125rem;
-}
-
 .hero-contact {
     margin-top: 2.5rem;
     display: flex;
@@ -307,17 +301,17 @@ main {
     height: 1.25rem;
 }
 
-.hero-image-column { display: none; } /* Oculto por padrão */
+.hero-image-column { display: none; }
 
 .hero-card {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
     border-radius: 1.5rem;
-    padding: 2.5rem; /* Aumentado */
+    padding: 3rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.75rem;
 }
 
 .hero-card-item {
@@ -328,19 +322,19 @@ main {
 }
 
 .hero-card-icon {
-    width: 3.5rem; /* Aumentado */
-    height: 3.5rem; /* Aumentado */
+    width: 4rem;
+    height: 4rem;
     border-radius: 9999px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.75rem; /* Aumentado */
+    font-size: 2rem;
     color: #fff;
     flex-shrink: 0;
 }
 
 .hero-card-title {
-    font-weight: 700; /* Aumentado */
+    font-weight: 700;
     color: #fff;
 }
 
@@ -418,7 +412,7 @@ main {
 /* --- BENEFITS SECTION --- */
 .benefits {
     padding: 5rem 0;
-    background-color: #F0F2FF; /* Custom light background */
+    background-color: #F0F2FF;
 }
 
 .benefits-grid {
@@ -653,7 +647,6 @@ main {
 
 /* --- MEDIA QUERIES --- */
 
-/* Tablet (e.g., iPads) */
 @media (min-width: 768px) {
     .section-title { font-size: 2.75rem; }
     
@@ -662,7 +655,7 @@ main {
 
     .hero { text-align: left; }
     .hero-grid { grid-template-columns: 1fr 1fr; }
-    .hero-title { font-size: 3.75rem; } /* Aumentado */
+    .hero-title { font-size: 4.2rem; }
     .hero-buttons { flex-direction: row; }
     .hero-description, .hero-buttons { margin-left: 0; margin-right: 0; }
     .hero-contact, .hero-buttons { justify-content: flex-start; }
@@ -677,12 +670,11 @@ main {
     .cta-title { font-size: 2.5rem; }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
     .section-title { font-size: 3rem; }
     .navbar-menu { gap: 2.5rem; }
     
-    .hero-title { font-size: 4.3rem; } /* Aumentado */
+    .hero-title { font-size: 4.8rem; }
     
     .services-grid { grid-template-columns: repeat(3, 1fr); }
     .benefits-grid { grid-template-columns: repeat(4, 1fr); }
