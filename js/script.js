@@ -1,73 +1,11 @@
-// Menu Mobile Toggle
-const navbarToggler = document.getElementById('navbar-toggler');
-const mobileMenu = document.getElementById('mobile-menu');
-
-navbarToggler.addEventListener('click', () => {
-    navbarToggler.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-});
-
-// Fechar menu ao clicar em um link
-document.querySelectorAll('.mobile-menu-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navbarToggler.classList.remove('active');
-        mobileMenu.classList.remove('active');
-    });
-});
-
-// Smooth scroll para links internos
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    });
-});
-
-// Adicionar animação ao scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.service-card, .benefit-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease';
-    observer.observe(el);
-});
-
-// Função do formulário
 function handleSubmit(event) {
     event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-    
-    const mensagem = `Olá Jardel! Vim do site jardelguimaraes.com.br
+    const form = event.target;
+    const nome = form.nome.value;
+    const email = form.email.value;
+    const servico = form.servico.value;
 
-📋 Meus dados:
-Nome: ${data.nome}
-Email: ${data.email}
-WhatsApp: ${data.whatsapp}
-Interesse: ${data.servico}
+    const mailtoLink = `mailto:contato@jardelguimaraes.com.br?subject=Agendamento de Consultoria - ${nome}&body=Olá, meu nome é ${nome} e meu e-mail é ${email}. Tenho interesse no serviço de ${servico}.`;
 
-Gostaria de saber mais sobre suas automações!`;
-    
-    const whatsappUrl = `https://wa.me/5537999351826?text=${encodeURIComponent(mensagem)}`;
-    
-    window.open(whatsappUrl, '_blank');
-    
-    alert('Redirecionando para o WhatsApp! 🚀');
-    event.target.reset();
+    window.location.href = mailtoLink;
 }

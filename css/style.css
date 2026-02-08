@@ -59,9 +59,10 @@ main {
 }
 
 .button {
-    padding: 1rem 2rem;
+    padding: 1.25rem 2.5rem; /* Standardized padding */
     border-radius: 9999px;
-    font-weight: 600;
+    font-weight: 700; /* Bolder font */
+    font-size: 1.125rem; /* Standardized font size */
     text-align: center;
     text-decoration: none;
     transition: all 0.3s;
@@ -72,8 +73,6 @@ main {
 .button-primary {
     background-color: var(--cta-green);
     color: #fff;
-    font-size: 1.25rem;
-    padding: 1.5rem 2.5rem;
     box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
 }
 .button-primary:hover {
@@ -284,21 +283,6 @@ main {
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
-}
-
-.hero-contact {
-    margin-top: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-size: 0.875rem;
-    color: var(--purple-100);
-}
-
-.hero-contact-icon {
-    width: 1.25rem;
-    height: 1.25rem;
 }
 
 .hero-image-column { display: none; }
