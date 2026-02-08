@@ -5,7 +5,8 @@ function handleSubmit(event) {
     const email = form.email.value;
     const servico = form.servico.value;
 
-    const mailtoLink = `mailto:contato@jardelguimaraes.com.br?subject=Agendamento de Consultoria - ${nome}&body=Olá, meu nome é ${nome} e meu e-mail é ${email}. Tenho interesse no serviço de ${servico}.`;
+    const texto = `Olá! Vim do site e gostaria de agendar uma consultoria.\n\n*Nome:* ${nome}\n*E-mail:* ${email}\n*Serviço de Interesse:* ${servico}`;
+    const whatsappLink = `https://wa.me/5537999351826?text=${encodeURIComponent(texto)}`;
 
-    window.location.href = mailtoLink;
+    window.open(whatsappLink, '_blank');
 }
