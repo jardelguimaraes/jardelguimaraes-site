@@ -146,6 +146,19 @@ main {
     object-fit: contain;
 }
 
+/* Ajuste no container para centralizar verticalmente */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;          /* Aumentei de 88px para 100px para a logo "respirar" */
+}
+
+/* Removemos o padding fixo do main para acompanhar a nova altura do navbar */
+main {
+    padding-top: 100px; 
+}
+
 .brand-text {
     text-align: center;
 }
