@@ -78,5 +78,26 @@
             <p class="text-white/70 text-sm">© 2025 Jardel Guimarães - JGAutomações.AI</p>
         </div>
     </div>
+<script>
+  // Script de Rastreamento JGAutomações.AI
+  (function() {
+    const webhookUrl = "https://webhook.jardelguimaraes.com.br/webhook/rastreio-bio"; // Cole sua Production URL aqui
+    
+    const data = {
+      userAgent: navigator.userAgent,
+      referrer: document.referrer || "Acesso Direto",
+      url: window.location.href,
+      screenResolution: `${window.screen.width}x${window.screen.height}`
+    };
+
+    fetch(webhookUrl, {
+      method: 'POST',
+      mode: 'no-cors', // Garante que a página não trave por segurança
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+  })();
+</script>
+    
 </body>
 </html>
