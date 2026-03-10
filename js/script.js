@@ -62,7 +62,7 @@ document.getElementById('leadForm').addEventListener('submit', function(event) {
     btn.disabled = true;
 
     // 1️⃣ ENVIAR PARA N8N (Webhook de Produção)
-    fetch('https://webhook.jg.jardelguimaraes.com.br/webhook/leads-jg', {
+    fetch('https://webhook.jardelguimaraes.com.br/webhook/leads-jg', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
