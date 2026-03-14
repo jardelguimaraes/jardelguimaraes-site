@@ -33,7 +33,12 @@
   ],
   "rewrites": [
     { "source": "/bio", "destination": "/bio.html" },
-    { "source": "/link", "destination": "/bio.html" }
+    { "source": "/link", "destination": "/bio.html" },
+    { "source": "/v2", "destination": "/index-v2.html" },
+    { "source": "/v3", "destination": "/index-v3.html" },
+    { "source": "/bio-v2", "destination": "/bio-v2.html" },
+    { "source": "/bio-v3", "destination": "/bio-v3.html" },
+    { "source": "/compare", "destination": "/compare.html" }
   ],
   "redirects": [
     { "source": "/diagnostico", "destination": "/#diagnostico", "permanent": false },

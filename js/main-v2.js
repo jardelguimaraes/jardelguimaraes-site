@@ -171,9 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
     phoneInput.addEventListener('input', function () {
       let v = this.value.replace(/\D/g, '');
       if (v.length <= 2) v = '(' + v;
-      else if (v.length <= 6) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
-      else if (v.length <= 10) v = '(' + v.slice(0,2) + ') ' + v.slice(2,6) + '-' + v.slice(6);
-      else v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7,11);
+      else if (v.length <= 6) v = '(' + v.slice(0, 2) + ') ' + v.slice(2);
+      else if (v.length <= 10) v = '(' + v.slice(0, 2) + ') ' + v.slice(2, 6) + '-' + v.slice(6);
+      else v = '(' + v.slice(0, 2) + ') ' + v.slice(2, 7) + '-' + v.slice(7, 11);
       this.value = v;
     });
   }
@@ -197,19 +197,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     if (!valid) return;
 
-    const nome    = document.getElementById('f-nome').value.trim();
-    const tipoEl  = document.getElementById('f-tipo');
-    const tipo    = tipoEl.options[tipoEl.selectedIndex]?.text || '';
-    const zap     = document.getElementById('f-whatsapp').value.trim();
-    const cidade  = document.getElementById('f-cidade').value.trim();
-    const email   = document.getElementById('f-email')?.value.trim() || 'Não informado';
+    const nome = document.getElementById('f-nome').value.trim();
+    const tipoEl = document.getElementById('f-tipo');
+    const tipo = tipoEl.options[tipoEl.selectedIndex]?.text || '';
+    const zap = document.getElementById('f-whatsapp').value.trim();
+    const cidade = document.getElementById('f-cidade').value.trim();
+    const email = document.getElementById('f-email')?.value.trim() || 'Não informado';
     const desafioEl = document.getElementById('f-desafio');
     const desafio = desafioEl?.value ? desafioEl.options[desafioEl.selectedIndex].text : 'Não informado';
 
     const formWrap = document.getElementById('form-wrap');
     const formSuccess = document.getElementById('form-success');
     const successName = document.getElementById('success-name');
-    
+
     // N8N Webhook submit logic
     const submitBtn = document.querySelector('.form-submit');
     const originalText = submitBtn.innerHTML;
@@ -218,24 +218,25 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.style.pointerEvents = 'none';
 
     fetch('https://webhook.jardelguimaraes.com.br/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, especialidade: tipo, whatsapp: zap, cidade, email, desafio })
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nome, especialidade: tipo, whatsapp: zap, cidade, email, desafio })
     })
-    .then(response => response.json())
-    .then(result => {
+      .then(response => response.json())
+      .then(result => {
         console.log('Sucesso N8N:', result);
+        alert('Enviado com sucesso! Entraremos em contato em breve.');
         if (formWrap) formWrap.style.display = 'none';
         if (formSuccess) formSuccess.style.display = 'block';
         if (successName) successName.textContent = nome.split(' ')[0];
-    })
-    .catch(error => {
+      })
+      .catch(error => {
         console.error('Erro N8N:', error);
         alert('Erro ao enviar. Tente novamente ou use o botão do WhatsApp flutuante.');
         submitBtn.innerHTML = originalText;
         submitBtn.style.opacity = '1';
         submitBtn.style.pointerEvents = 'auto';
-    });
+      });
   };
 
   /* ── SMOOTH SCROLL for anchor links ── */
@@ -255,8 +256,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.svc-card, .num-card').forEach(card => {
     card.addEventListener('mousemove', e => {
       const r = card.getBoundingClientRect();
-      const x = ((e.clientX - r.left) / r.width  - .5) * 8;
-      const y = ((e.clientY - r.top)  / r.height - .5) * 8;
+      const x = ((e.clientX - r.left) / r.width - .5) * 8;
+      const y = ((e.clientY - r.top) / r.height - .5) * 8;
       card.style.transform = `translateY(-6px) rotateX(${-y}deg) rotateY(${x}deg)`;
       card.style.transition = 'transform .08s ease';
     });
