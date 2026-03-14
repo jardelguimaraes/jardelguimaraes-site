@@ -1,3 +1,47 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/bio", "destination": "/bio.html" },
+    { "source": "/link", "destination": "/bio.html" },
+    { "source": "/v2", "destination": "/index-v2.html" },
+    { "source": "/v3", "destination": "/index-v3.html" },
+    { "source": "/bio-v2", "destination": "/bio-v2.html" },
+    { "source": "/bio-v3", "destination": "/bio-v3.html" },
+    { "source": "/compare", "destination": "/compare.html" }
+  ],
+  "redirects": [
+    { "source": "/diagnostico", "destination": "/#diagnostico", "permanent": false },
+    { "source": "/planos", "destination": "/#planos", "permanent": false }
+  ]
 }
