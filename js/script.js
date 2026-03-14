@@ -1,12 +1,21 @@
 function handleSubmit(event) {
     event.preventDefault();
-    const form = event.target;
-    const nome = form.nome.value;
-    const email = form.email.value;
-    const servico = form.servico.value;
-
-    const texto = `Olá! Vim do site e gostaria de agendar uma consultoria.\n\n*Nome:* ${nome}\n*E-mail:* ${email}\n*Serviço de Interesse:* ${servico}`;
-    const whatsappLink = `https://wa.me/5537999351826?text=${encodeURIComponent(texto)}`;
-
-    window.open(whatsappLink, '_blank');
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    
+    // Envio para webhook atualizado
+    fetch('https://webhook.jardelguimaraes.com.br/submit', {  // URL alterada de webhook.jg.jardelguimaraes.com.br
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        console.log('Sucesso:', result);
+        alert('Obrigado! Entraremos em contato em breve.');
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert('Erro ao enviar. Tente novamente.');
+    });
 }

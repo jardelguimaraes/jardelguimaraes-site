@@ -1,280 +1,668 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="automação, inteligência artificial, chatbot, whatsapp, delivery, agendamento, Minas Gerais">
-<meta name="author" content="Jardel Guimarães">
-<meta property="og:title" content="JGAutomações.AI - Jardel Guimarães">
-<meta property="og:description" content="Especialista em automações inteligentes para empresas">
-<meta property="og:image" content="https://jardelguimaraes.com.br/img/logojg.png">
-<meta property="og:url" content="https://jardelguimaraes.com.br">
-
-<!-- Preload da logo -->
-<link rel="preload" href="img/logojg.png" as="image">
-    
-    <link rel="stylesheet" href="css/style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JGAutomações.AI — IA para Clínicas de Elite | Itaúna/MG</title>
+  <meta name="description" content="Recupere 15h na agenda semanal e reduza faltas em 40%. IA especializada para clínicas e consultórios. Diagnóstico gratuito — Itaúna/MG.">
+  <meta property="og:title" content="JGAutomações.AI — IA para Clínicas de Elite">
+  <meta property="og:description" content="Agente IA no WhatsApp, agenda inteligente 24h e presença digital premium para clínicas. 7 dias para ir ao ar.">
+  <meta property="og:image" content="img/logogj.png">
+  <meta name="theme-color" content="#0A3160">
+  <link rel="icon" type="image/png" href="img/logogj.png">
+  <link rel="apple-touch-icon" href="img/logogj.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header/Navbar -->
-    <header class="navbar">
-        <div class="container navbar-container">
-            <a href="#" class="navbar-brand">
-                <img src="img/logojg.png" alt="JGAutomações.AI Logo" class="logo"/>
-                <div class="brand-text">
-                    <span class="brand-name gradient-text">Jardel Guimarães</span>
-                    <span class="brand-subtitle">JGAutomações.AI</span>
-                </div>
-            </a>
-            <nav class="navbar-menu">
-                <a href="#servicos" class="navbar-link">Serviços</a>
-                <a href="#beneficios" class="navbar-link">Benefícios</a>
-                <a href="#contato" class="navbar-link">Contato</a>
-            </nav>
-            <div class="navbar-actions">
-                <button class="navbar-toggler" id="navbar-toggler" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="#servicos" class="mobile-menu-link">Serviços</a>
-            <a href="#beneficios" class="mobile-menu-link">Benefícios</a>
-            <a href="#contato" class="mobile-menu-link">Contato</a>
-        </div>
-    </header>
+<!-- ── CURSOR ── -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero gradient-bg">
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-content">
-                        <div class="hero-badge-container">
-                            <span class="hero-badge">✨ Especialista em Automações com IA</span>
-                        </div>
-                        <h1 class="hero-title">
-                            Automatize seu negócio com <span class="hero-highlight">Inteligência Artificial e IA prática</span>
-                        </h1>
-                        <p class="hero-description">
-                            Sou Jardel Guimarães, e ajudo empresas a economizar tempo e aumentar vendas através de automações inteligentes.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="https://wa.me/5537999351826?text=Olá%20Jardel!%20Quero%20automatizar%20meu%20negócio" target="_blank" class="button button-primary pulse-border">
-                                🚀 Falar com Jardel
-                            </a>
-                            <a href="#servicos" class="button button-secondary">
-                                Ver Soluções
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hero-image-column floating">
-                        <div class="hero-card">
-                            <div class="hero-card-item">
-                                <div class="hero-card-icon" style="background-color: #4ADE80;">✓</div>
-                                <div>
-                                    <p class="hero-card-title">Atendimento 24/7 com IA</p>
-                                    <p class="hero-card-subtitle">WhatsApp, Instagram, Facebook</p>
-                                </div>
-                            </div>
-                            <div class="hero-card-item">
-                                <div class="hero-card-icon" style="background-color: #60A5FA;">🏪</div>
-                                <div>
-                                    <p class="hero-card-title">Gestão automatizada para lojas & escritórios</p>
-                                    <p class="hero-card-subtitle">Gestão completa automatizada</p>
-                                </div>
-                            </div>
-                            <div class="hero-card-item">
-                                <div class="hero-card-icon" style="background-color: #FBBF24;">📱</div>
-                                <div>
-                                    <p class="hero-card-title">Integração Apple/iOS sem complicação</p>
-                                    <p class="hero-card-subtitle">Atalhos e automações iOS</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Serviços -->
-        <section id="servicos" class="services">
-            <div class="container">
-                <header class="section-header">
-                    <h2 class="section-title">Minhas <span class="gradient-text">Soluções</span></h2>
-                    <p class="section-subtitle">Automações personalizadas para cada tipo de negócio</p>
-                </header>
-                
-                <div class="services-grid">
-                    <div class="service-card" style="--border-color: #8B5CF6;">
-                        <div class="service-card-icon gradient-bg">💬</div>
-                        <h3 class="service-card-title">Atendimento Inteligente</h3>
-                        <p class="service-card-description">Chatbots com IA para WhatsApp, Instagram e Facebook. Atendimento humanizado 24/7 que converte.</p>
-                        <ul class="service-card-list">
-                            <li><span>Respostas instantâneas</span></li>
-                            <li><span>Qualificação de leads</span></li>
-                            <li><span>Integração com CRM</span></li>
-                        </ul>
-                    </div>
-                    <div class="service-card" style="--border-color: #3B82F6;">
-                        <div class="service-card-icon" style="background-image: linear-gradient(to right, #3B82F6, #1D4ED8);">🏪</div>
-                        <h3 class="service-card-title">Lojas & Varejo</h3>
-                        <p class="service-card-description">Automação para lojas físicas e online: atendimento, vendas, estoque e fidelização.</p>
-                        <ul class="service-card-list">
-                            <li><span>Catálogo digital automatizado</span></li>
-                            <li><span>Controle de estoque</span></li>
-                            <li><span>Programa de fidelidade</span></li>
-                        </ul>
-                    </div>
-                    <div class="service-card" style="--border-color: #4F46E5;">
-                        <div class="service-card-icon" style="background-image: linear-gradient(to right, #4F46E5, #312E81);">🏢</div>
-                        <h3 class="service-card-title">Escritórios & Empresas</h3>
-                        <p class="service-card-description">Automatize processos administrativos, agendamentos, reuniões e comunicação interna.</p>
-                        <ul class="service-card-list">
-                            <li><span>Agendamento automático</span></li>
-                            <li><span>Gestão de documentos</span></li>
-                            <li><span>Comunicação otimizada</span></li>
-                        </ul>
-                    </div>
-                    <div class="service-card" style="--border-color: #EA580C;">
-                        <div class="service-card-icon" style="background-image: linear-gradient(to right, #EA580C, #C2410C);">🍔</div>
-                        <h3 class="service-card-title">Delivery & Restaurantes</h3>
-                        <p class="service-card-description">Sistema completo de pedidos, confirmações e acompanhamento para seu negócio.</p>
-                        <ul class="service-card-list">
-                            <li><span>Cardápio digital interativo</span></li>
-                            <li><span>Confirmação e rastreamento</span></li>
-                            <li><span>Gestão em tempo real</span></li>
-                        </ul>
-                    </div>
-                    <div class="service-card" style="--border-color: #DB2777;">
-                        <div class="service-card-icon" style="background-image: linear-gradient(to right, #DB2777, #BE185D);">📱</div>
-                        <h3 class="service-card-title">Automação Apple/iPhone</h3>
-                        <p class="service-card-description">Atalhos personalizados e automações iOS para otimizar sua rotina e produtividade.</p>
-                        <ul class="service-card-list">
-                            <li><span>Atalhos personalizados Siri</span></li>
-                            <li><span>Integração com apps</span></li>
-                            <li><span>Automações por contexto</span></li>
-                        </ul>
-                    </div>
-                    <div class="service-card" style="--border-color: #16A34A;">
-                        <div class="service-card-icon" style="background-image: linear-gradient(to right, #16A34A, #15803D);">🎯</div>
-                        <h3 class="service-card-title">Marketing & Leads</h3>
-                        <p class="service-card-description">Captação, qualificação e nutrição de leads. Landing pages e tráfego pago otimizado.</p>
-                        <ul class="service-card-list">
-                            <li><span>Landing pages de conversão</span></li>
-                            <li><span>Gestão de tráfego pago</span></li>
-                            <li><span>Follow-up automatizado</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Benefícios -->
-        <section id="beneficios" class="benefits">
-            <div class="container">
-                <header class="section-header">
-                    <h2 class="section-title">Por que trabalhar <span class="gradient-text">comigo?</span></h2>
-                </header>
-                
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <div class="benefit-icon gradient-bg">⚡</div>
-                        <h3 class="benefit-title">Rapidez</h3>
-                        <p class="benefit-description">Implementação em até 7 dias</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon gradient-bg">💰</div>
-                        <h3 class="benefit-title">Economia</h3>
-                        <p class="benefit-description">Reduza custos em até 70%</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon gradient-bg">📈</div>
-                        <h3 class="benefit-title">Resultados</h3>
-                        <p class="benefit-description">Aumento de até 300% em conversões</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon gradient-bg">🛡️</div>
-                        <h3 class="benefit-title">Suporte</h3>
-                        <p class="benefit-description">Acompanhamento contínuo</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA/Contato -->
-        <section id="contato" class="cta">
-            <div class="container cta-container">
-                <div class="cta-box gradient-bg">
-                    <h2 class="cta-title">Pronto para Automatizar?</h2>
-                    <p class="cta-subtitle">Preencha o formulário e descubra como posso transformar seu negócio.</p>
-                    
-                    <form class="cta-form" onsubmit="handleSubmit(event)">
-                        <div class="form-grid">
-                            <input type="text" name="nome" placeholder="Seu Nome" required class="form-input">
-                            <input type="email" name="email" placeholder="Seu E-mail" required class="form-input">
-                        </div>
-                        <select name="servico" required class="form-input">
-                            <option value="">Qual solução te interessa?</option>
-                            <option value="atendimento">Atendimento Inteligente</option>
-                            <option value="loja">Automação para Loja/Varejo</option>
-                            <option value="escritorio">Automação para Escritório</option>
-                            <option value="delivery">Delivery Automatizado</option>
-                            <option value="apple">Automação Apple/iPhone</option>
-                            <option value="marketing">Marketing & Captação de Leads</option>
-                            <option value="site">Site/Landing Page</option>
-                            <option value="completo">Pacote Completo</option>
-                        </select>
-                        <button type="submit" class="button button-form">
-                            Agendar Consultoria Gratuita
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <img src="img/logojg.png" alt="JGAutomações.AI Logo" class="footer-logo"/>
-            <h3 class="footer-title">Jardel Guimarães</h3>
-            <p class="footer-subtitle gradient-text">JGAutomações.AI</p>
-            <p class="footer-description">Transformando negócios com inteligência artificial.</p>
-            <div class="footer-links">
-                <a href="https://www.instagram.com/jgautomacao.ai" target="_blank" class="footer-link">Instagram</a>
-                <a href="https://wa.me/5537999351826" target="_blank" class="footer-link">WhatsApp</a>
-                <a href="mailto:contato@jardelguimaraes.com.br" class="footer-link">E-mail</a>
-                <a href="#servicos" class="footer-link">Serviços</a>
-            </div>
-            <p class="footer-copyright">© 2025 Jardel Guimarães - JGAutomações.AI</p>
-            <p class="footer-contact">
-                WhatsApp: (37) 99935-1826 | E-mail: <a href="mailto:contato@jardelguimaraes.com.br" class="footer-link">contato@jardelguimaraes.com.br</a>
-            </p>
-        </div>
-    </footer>
-
-        <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5537999351826?text=Olá!%20Vim%20do%20seu%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" class="whatsapp-fab" aria-label="Fale conosco no WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" class="whatsapp-icon" viewBox="0 0 448 512">
-            <path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 434.4c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L78 358.3l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
-        </svg>
+<!-- ── NAVBAR ── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-img">
+        <img src="img/logogj.png" alt="JGAutomações.AI Logo">
+      </div>
+      <div class="nav-logo-text">
+        <div class="nav-logo-name">JGAutomações<span class="ai">.AI</span></div>
+        <div class="nav-logo-sub">Jardel Guimarães</div>
+      </div>
     </a>
-    <script src="js/script.js"></script>
-    <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
+    <ul class="nav-links">
+      <li><a href="#solucoes" class="nav-link">Soluções</a></li>
+      <li><a href="#processo" class="nav-link">Como Funciona</a></li>
+      <li><a href="#planos" class="nav-link">Planos</a></li>
+      <li><a href="#diagnostico" class="nav-link">Diagnóstico</a></li>
+    </ul>
+    <a href="#diagnostico" class="nav-cta"><span>Diagnóstico Grátis</span></a>
+    <div class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── MOBILE NAV ── -->
+<div class="nav-mobile" id="mobileNav">
+  <a href="#solucoes">Soluções</a>
+  <a href="#processo">Como Funciona</a>
+  <a href="#planos">Planos</a>
+  <a href="#diagnostico" class="nav-mobile-cta">Diagnóstico Grátis</a>
+</div>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+
+  <div class="hero-left">
+    <div class="hero-eyebrow reveal">
+      <span class="tag">IA para Clínicas · Itaúna/MG</span>
+    </div>
+
+    <h1 class="hero-title reveal reveal-d1">
+      Recupere<br>
+      <em>15 horas</em><br>
+      <strong>na sua agenda</strong>
+    </h1>
+
+    <p class="hero-subtitle reveal reveal-d2">
+      Reduza faltas em <strong>40%</strong>, atenda pacientes às <strong>22h</strong> e transforme seu WhatsApp em máquina de agendamentos — com IA que fala como sua equipe.
+    </p>
+
+    <div class="hero-actions reveal reveal-d3">
+      <a href="#diagnostico" class="btn-primary">
+        Diagnóstico Gratuito
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="https://wa.me/5537993518260?text=Olá+Jardel!+Quero+saber+mais+sobre+a+IA+para+clínicas" class="btn-wa" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+
+    <div class="hero-stats reveal reveal-d4">
+      <div>
+        <div class="hero-stat-num" data-count="40" data-suffix="%">0%</div>
+        <div class="hero-stat-label"><strong>Menos faltas</strong>protocolo IA</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" data-count="15" data-suffix="h">0h</div>
+        <div class="hero-stat-label"><strong>Horas/semana</strong>recuperadas</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" data-count="7" data-suffix="d">0d</div>
+        <div class="hero-stat-label"><strong>Dias para</strong>ir ao ar</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat demo visual -->
+  <div class="hero-right">
+    <div class="hero-visual reveal">
+      <div class="hv-header">
+        <div class="hv-logo">
+          <img src="img/logogj.png" alt="Clínica">
+        </div>
+        <div>
+          <div class="hv-clinic-name">Clínica da sua Especialidade</div>
+          <div class="hv-clinic-sub">Atendimento via IA — 24/7</div>
+        </div>
+        <div class="hv-status">
+          <div class="hv-dot"></div>
+          Online agora
+        </div>
+      </div>
+      <div class="hv-chat" id="hv-chat" style="max-height:220px;overflow:hidden;">
+        <div class="hv-msg bot">👋 Olá! Sou a IA da Clínica. Como posso ajudar você hoje?</div>
+      </div>
+      <div class="hv-input-row">
+        <div class="hv-input-mock">Digite sua mensagem...</div>
+        <div class="hv-send">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <div class="hv-badge">
+        <div class="hv-dot"></div>
+        <span>IA respondeu em <strong>3 segundos</strong> — você dormia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STRIP ── -->
+<div class="strip">
+  <div class="strip-track">
+    <div class="strip-item"><div class="strip-dot"></div>Agendamento IA 24/7</div>
+    <div class="strip-item"><div class="strip-dot"></div>Redução de Faltas 40%</div>
+    <div class="strip-item"><div class="strip-dot"></div>WhatsApp Inteligente</div>
+    <div class="strip-item"><div class="strip-dot"></div>Confirmação Automática</div>
+    <div class="strip-item"><div class="strip-dot"></div>Presença Digital Premium</div>
+    <div class="strip-item"><div class="strip-dot"></div>NPS Pós-Consulta</div>
+    <div class="strip-item"><div class="strip-dot"></div>LGPD Saúde Compliant</div>
+    <div class="strip-item"><div class="strip-dot"></div>7 Dias Para Ir ao Ar</div>
+    <!-- repeat for seamless loop -->
+    <div class="strip-item"><div class="strip-dot"></div>Agendamento IA 24/7</div>
+    <div class="strip-item"><div class="strip-dot"></div>Redução de Faltas 40%</div>
+    <div class="strip-item"><div class="strip-dot"></div>WhatsApp Inteligente</div>
+    <div class="strip-item"><div class="strip-dot"></div>Confirmação Automática</div>
+    <div class="strip-item"><div class="strip-dot"></div>Presença Digital Premium</div>
+    <div class="strip-item"><div class="strip-dot"></div>NPS Pós-Consulta</div>
+    <div class="strip-item"><div class="strip-dot"></div>LGPD Saúde Compliant</div>
+    <div class="strip-item"><div class="strip-dot"></div>7 Dias Para Ir ao Ar</div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     NUMBERS
+════════════════════════════════════════ -->
+<section class="numbers" id="resultados">
+  <div class="container">
+    <div class="numbers-grid reveal">
+      <div class="num-card">
+        <div class="num-value"><span data-count="40" data-suffix="%">40%</span></div>
+        <div class="num-label">Redução de Faltas</div>
+        <div class="num-desc">Protocolo de confirmação inteligente via WhatsApp com reconfirmação automática</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value"><span data-count="15" data-suffix="h">15h</span></div>
+        <div class="num-label">Horas/Semana Liberadas</div>
+        <div class="num-desc">IA que agenda, confirma, reagenda e faz follow-up — sem intervenção humana</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value"><span data-count="3" data-suffix="×">3×</span></div>
+        <div class="num-label">Mais Agendamentos</div>
+        <div class="num-desc">Atendimento 24/7 captura pacientes fora do horário comercial, inclusive madrugada</div>
+      </div>
+      <div class="num-card">
+        <div class="num-value"><span data-count="7" data-suffix="d">7d</span></div>
+        <div class="num-label">Do Briefing ao Ar</div>
+        <div class="num-desc">Do diagnóstico inicial à IA funcionando em produção na sua clínica</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PROBLEM
+════════════════════════════════════════ -->
+<section class="problem" id="problema">
+  <div class="container">
+    <div class="reveal"><span class="tag">O Custo Invisível</span></div>
+    <h2 style="font-family:var(--font-display);font-size:clamp(36px,4.5vw,64px);font-style:italic;color:var(--blue);margin:18px 0 0;line-height:1.05;" class="reveal reveal-d1">
+      Cada minuto sem IA<br><span style="color:var(--teal)">custa pacientes reais</span>
+    </h2>
+    <div class="problem-grid">
+      <div class="reveal reveal-d1">
+        <div class="problem-big">78<sub>%</sub></div>
+        <p class="problem-caption">das clínicas em cidades médias operam com agendamento manual — perdendo pacientes para concorrentes digitalizados a cada hora do dia.</p>
+      </div>
+      <div class="problem-items reveal reveal-d2">
+        <div class="problem-item">
+          <div class="problem-n">01</div>
+          <div>
+            <div class="problem-h">Paciente liga às 21h, ninguém atende</div>
+            <p class="problem-p">Ele agenda na primeira clínica que responde. Com IA, sua recepção nunca dorme — mesmo fins de semana e feriados.</p>
+          </div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-n">02</div>
+          <div>
+            <div class="problem-h">Faltas sem aviso destroem a agenda</div>
+            <p class="problem-p">Confirmação manual falha. Protocolo de IA reduz no-show em até 40% com lembretes inteligentes e reconfirmação automática.</p>
+          </div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-n">03</div>
+          <div>
+            <div class="problem-h">Equipe afogada em tarefas repetitivas</div>
+            <p class="problem-p">Agendamento, confirmação, follow-up — tudo automatizado. Sua equipe foca no atendimento humano que realmente importa.</p>
+          </div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-n">04</div>
+          <div>
+            <div class="problem-h">Paciente some após a consulta</div>
+            <p class="problem-p">Sem follow-up automático, retorno e NPS, o LTV do paciente vai a zero. IA mantém o relacionamento vivo e traz de volta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════ -->
+<section class="services" id="solucoes">
+  <div class="container">
+    <div class="services-intro">
+      <div>
+        <span class="tag reveal">Soluções</span>
+        <h2 style="font-family:var(--font-display);font-size:clamp(36px,4.5vw,64px);font-style:italic;color:var(--blue);margin-top:18px;line-height:1.05;" class="reveal reveal-d1">
+          Engenharia de IA<br><span style="color:var(--teal)">para sua clínica</span>
+        </h2>
+      </div>
+      <p style="font-size:16px;color:var(--slate);line-height:1.85;font-weight:300;align-self:end;" class="reveal reveal-d2">
+        Não entregamos "chatbots". Desenvolvemos arquiteturas de IA proprietárias com tecnologia de ponta — constantemente atualizadas — integradas ao ecossistema da sua clínica para gerar resultados mensuráveis.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon">🤖</div>
+        <div class="svc-title">Agente IA no WhatsApp 24h</div>
+        <p class="svc-desc">Triagem, qualificação e agendamento autônomo. A IA atende, entende e agenda com linguagem humanizada calibrada para saúde — mesmo enquanto você dorme.</p>
+        <div class="svc-tags"><span class="svc-tag">IA Proprietária</span><span class="svc-tag">Tempo Real</span></div>
+      </div>
+      <div class="svc-card reveal reveal-d1">
+        <div class="svc-icon">📅</div>
+        <div class="svc-title">Agenda Inteligente 24/7</div>
+        <p class="svc-desc">Integração direta com o calendário da clínica. Slots em tempo real, confirmação automática e protocolo anti-falta com taxa comprovada de redução de no-show.</p>
+        <div class="svc-tags"><span class="svc-tag">Agenda Integrada</span><span class="svc-tag">Protocolo Anti-Falta</span></div>
+      </div>
+      <div class="svc-card reveal reveal-d2">
+        <div class="svc-icon">🌐</div>
+        <div class="svc-title">Presença Digital Premium</div>
+        <p class="svc-desc">Site, link de bio e Google Meu Negócio configurados para converter visitante em paciente agendado. Primeira impressão que transmite autoridade.</p>
+        <div class="svc-tags"><span class="svc-tag">SEO Local</span><span class="svc-tag">Alta Conversão</span></div>
+      </div>
+      <div class="svc-card reveal reveal-d1">
+        <div class="svc-icon">📊</div>
+        <div class="svc-title">Analytics & NPS Automático</div>
+        <p class="svc-desc">Dashboard de métricas, NPS pós-consulta via WhatsApp e gestão ativa de avaliações Google para construir e proteger a reputação da clínica.</p>
+        <div class="svc-tags"><span class="svc-tag">Reputação Digital</span><span class="svc-tag">NPS Score</span></div>
+      </div>
+      <div class="svc-card reveal reveal-d2">
+        <div class="svc-icon">🔄</div>
+        <div class="svc-title">Reativação & Retenção</div>
+        <p class="svc-desc">Campanhas automáticas de retorno, lembretes de exames e protocolos de follow-up que mantêm o valor do ciclo de vida do paciente elevado.</p>
+        <div class="svc-tags"><span class="svc-tag">CRM Inteligente</span><span class="svc-tag">Reativação Segmentada</span></div>
+      </div>
+      <div class="svc-card reveal reveal-d3">
+        <div class="svc-icon">🔒</div>
+        <div class="svc-title">LGPD Saúde Compliant</div>
+        <p class="svc-desc">Toda arquitetura construída em conformidade com a LGPD para dados sensíveis de saúde. Segurança, privacidade e confiança do primeiro dia.</p>
+        <div class="svc-tags"><span class="svc-tag">LGPD Saúde</span><span class="svc-tag">Máxima Segurança</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PROCESS
+════════════════════════════════════════ -->
+<section class="process" id="processo">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:0;">
+      <span class="tag reveal">Processo</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(36px,4.5vw,64px);font-style:italic;color:var(--blue);margin-top:18px;line-height:1.05;" class="reveal reveal-d1">
+        De zero a <span style="color:var(--teal)">100%</span><br>em 7 dias úteis
+      </h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal reveal-d1">
+        <div class="step-circle">1</div>
+        <div class="step-day">Dia 1</div>
+        <div class="step-title">Briefing & Diagnóstico</div>
+        <p class="step-desc">30 minutos para entender sua clínica, especialidade e metas. Mapeamos o que existe e o que precisa ser construído.</p>
+        <span class="step-badge">✓ 100% gratuito</span>
+      </div>
+      <div class="process-step reveal reveal-d2">
+        <div class="step-circle">2</div>
+        <div class="step-day">Dias 2–3</div>
+        <div class="step-title">Arquitetura & Design</div>
+        <p class="step-desc">Configuramos os fluxos de IA e desenhamos o site. Você aprova antes de qualquer coisa ir ao ar — revisões ilimitadas.</p>
+        <span class="step-badge">✓ Você aprova tudo</span>
+      </div>
+      <div class="process-step reveal reveal-d3">
+        <div class="step-circle">3</div>
+        <div class="step-day">Dias 4–5</div>
+        <div class="step-title">Desenvolvimento & Testes</div>
+        <p class="step-desc">Construímos o agente IA, integramos com WhatsApp Business e calendário, e testamos com cenários reais da sua especialidade.</p>
+        <span class="step-badge">✓ Testes reais</span>
+      </div>
+      <div class="process-step reveal reveal-d4">
+        <div class="step-circle">4</div>
+        <div class="step-day">Dias 6–7</div>
+        <div class="step-title">Go Live & Treinamento</div>
+        <p class="step-desc">Publicação, treinamento da equipe e monitoramento ativo nas primeiras 72 horas. Suporte contínuo incluso no plano.</p>
+        <span class="step-badge">✓ Suporte incluso</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════ -->
+<section class="testimonials" id="depoimentos">
+  <div class="container">
+    <span class="tag reveal">Resultados Reais</span>
+    <h2 style="font-family:var(--font-display);font-size:clamp(36px,4.5vw,64px);font-style:italic;color:var(--blue);margin-top:18px;margin-bottom:0;line-height:1.05;" class="reveal reveal-d1">
+      O que dizem as<br><span style="color:var(--teal)">clínicas parceiras</span>
+    </h2>
+    <div class="t-grid">
+      <div class="t-card reveal reveal-d1">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Em 30 dias, triplicamos os agendamentos online. Os pacientes chegam sabendo dos nossos serviços. A IA não erra, não falta e não cansa."</p>
+        <div class="t-author">
+          <div class="t-avatar">DM</div>
+          <div><div class="t-name">Dra. Mariana Santos</div><div class="t-role">Dermatologia · BH/MG</div></div>
+        </div>
+      </div>
+      <div class="t-card reveal reveal-d2">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Domingo às 22h o sistema agendou 3 consultas enquanto eu dormia. Isso não é automação — é uma recepcionista que nunca para."</p>
+        <div class="t-author">
+          <div class="t-avatar">RA</div>
+          <div><div class="t-name">Dr. Ricardo Alves</div><div class="t-role">Ortopedia · SP/SP</div></div>
+        </div>
+      </div>
+      <div class="t-card reveal reveal-d3">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Reduzi faltas de 28% para 11% em 45 dias. O protocolo de confirmação da IA é mais eficiente do que qualquer coisa que tentamos antes."</p>
+        <div class="t-author">
+          <div class="t-avatar">CF</div>
+          <div><div class="t-name">Dra. Camila Ferreira</div><div class="t-role">Nutrição · Curitiba/PR</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PRICING
+════════════════════════════════════════ -->
+<section class="pricing" id="planos">
+  <div class="container">
+    <span class="tag reveal">Planos</span>
+    <h2 style="font-family:var(--font-display);font-size:clamp(36px,4.5vw,64px);font-style:italic;color:var(--blue);margin-top:18px;margin-bottom:0;line-height:1.05;" class="reveal reveal-d1">
+      Investimento <span style="color:var(--teal)">transparente</span><br>sem surpresas
+    </h2>
+    <div class="pricing-grid">
+      <div class="price-card reveal reveal-d1">
+        <div class="price-plan">Essencial</div>
+        <div class="price-from">a partir de</div>
+        <div class="price-value"><small>R$</small>197</div>
+        <div class="price-period">por mês · sem fidelidade</div>
+        <div class="price-setup">
+          <span class="price-setup-lbl">Setup único</span>
+          <span class="price-setup-val">R$ 497</span>
+        </div>
+        <div class="price-divider"></div>
+        <div class="price-name">Presença Digital</div>
+        <p class="price-desc">Para consultórios que querem começar com o essencial e ter presença digital profissional.</p>
+        <div class="price-features">
+          <div class="price-feature">Site premium responsivo</div>
+          <div class="price-feature">Link de Bio para Instagram</div>
+          <div class="price-feature">Google Meu Negócio configurado</div>
+          <div class="price-feature">Agendamento básico online</div>
+          <div class="price-feature">Suporte via WhatsApp</div>
+        </div>
+        <a href="#diagnostico" class="price-btn price-btn-out">Começar Agora</a>
+      </div>
+      <div class="price-card featured reveal reveal-d2">
+        <div class="price-plan">Clínica Completa</div>
+        <div class="price-from">a partir de</div>
+        <div class="price-value"><small>R$</small>347</div>
+        <div class="price-period">por mês · sem fidelidade</div>
+        <div class="price-setup">
+          <span class="price-setup-lbl">Setup único</span>
+          <span class="price-setup-val">R$ 797</span>
+        </div>
+        <div class="price-divider"></div>
+        <div class="price-name">IA + Presença Digital</div>
+        <p class="price-desc">Para clínicas que querem IA atendendo 24h e agenda preenchendo automaticamente.</p>
+        <div class="price-features">
+          <div class="price-feature">Tudo do plano Essencial</div>
+          <div class="price-feature">Agente IA no WhatsApp 24h</div>
+          <div class="price-feature">Agenda integrada em tempo real</div>
+          <div class="price-feature">Confirmação automática de consultas</div>
+          <div class="price-feature">NPS pós-consulta automático</div>
+          <div class="price-feature">Dashboard de métricas</div>
+        </div>
+        <a href="#diagnostico" class="price-btn price-btn-fill">Quero Este Plano</a>
+      </div>
+      <div class="price-card reveal reveal-d3">
+        <div class="price-plan">Clínica 360°</div>
+        <div class="price-from">a partir de</div>
+        <div class="price-value"><small>R$</small>497</div>
+        <div class="price-period">por mês · sem fidelidade</div>
+        <div class="price-setup">
+          <span class="price-setup-lbl">Setup único</span>
+          <span class="price-setup-val">R$ 997</span>
+        </div>
+        <div class="price-divider"></div>
+        <div class="price-name">Experiência Completa</div>
+        <p class="price-desc">Para clínicas com múltiplos profissionais que querem gestão total de pacientes e reputação.</p>
+        <div class="price-features">
+          <div class="price-feature">Tudo do plano Completo</div>
+          <div class="price-feature">Múltiplos profissionais/agendas</div>
+          <div class="price-feature">Campanha de reativação de pacientes</div>
+          <div class="price-feature">Gestão ativa de reputação Google</div>
+          <div class="price-feature">Relatórios mensais detalhados</div>
+          <div class="price-feature">Gerente dedicado (Jardel)</div>
+        </div>
+        <a href="#diagnostico" class="price-btn price-btn-out">Falar com Jardel</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FORM / DIAGNÓSTICO
+════════════════════════════════════════ -->
+<section class="form-section" id="diagnostico">
+  <div class="container">
+    <span class="tag reveal">Diagnóstico Gratuito</span>
+    <h2 style="font-family:var(--font-display);font-size:clamp(36px,4.5vw,64px);font-style:italic;color:var(--blue);margin-top:18px;margin-bottom:0;line-height:1.05;" class="reveal reveal-d1">
+      Solicite seu <span style="color:var(--teal)">diagnóstico</span><br>sem compromisso
+    </h2>
+    <div class="form-grid">
+      <div class="reveal reveal-d1">
+        <p class="form-pitch">Em até 24h, Jardel analisa sua presença digital e mostra exatamente o que está custando pacientes — de graça, sem enrolação. Nossa IA entra em contato em minutos.</p>
+        <div class="form-perks">
+          <div class="form-perk">
+            <div class="perk-icon">🔍</div>
+            <div class="perk-body"><strong>Análise completa da presença digital</strong><span>Site, Instagram, Google e concorrentes locais</span></div>
+          </div>
+          <div class="form-perk">
+            <div class="perk-icon">📋</div>
+            <div class="perk-body"><strong>Relatório por especialidade</strong><span>Diagnóstico personalizado para seu nicho</span></div>
+          </div>
+          <div class="form-perk">
+            <div class="perk-icon">🚀</div>
+            <div class="perk-body"><strong>7 dias do briefing ao ar</strong><span>Do diagnóstico à IA funcionando em produção</span></div>
+          </div>
+          <div class="form-perk">
+            <div class="perk-icon">✅</div>
+            <div class="perk-body"><strong>Sem fidelidade ou contrato</strong><span>Mensalidade mensal, cancela quando quiser</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="form-card">
+          <div id="form-wrap">
+            <div class="form-title">Quero meu diagnóstico</div>
+            <p class="form-sub">Preencha em 30 segundos · IA responde em minutos</p>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="f-nome">Seu nome *</label>
+                <input type="text" class="form-input" id="f-nome" placeholder="Dr. João Silva" autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-tipo">Especialidade *</label>
+                <select class="form-select" id="f-tipo">
+                  <option value="" disabled selected>Selecione...</option>
+                  <optgroup label="── Médico">
+                    <option>Clínica Médica Geral</option>
+                    <option>Cardiologia</option>
+                    <option>Dermatologia</option>
+                    <option>Ginecologia / Obstetrícia</option>
+                    <option>Neurologia</option>
+                    <option>Ortopedia</option>
+                    <option>Pediatria</option>
+                    <option>Psiquiatria</option>
+                    <option>Urologia</option>
+                    <option>Outra especialidade médica</option>
+                  </optgroup>
+                  <optgroup label="── Odontologia">
+                    <option>Clínica Odontológica</option>
+                    <option>Ortodontia</option>
+                    <option>Implantodontia</option>
+                  </optgroup>
+                  <optgroup label="── Saúde & Bem-estar">
+                    <option>Fisioterapia</option>
+                    <option>Nutrição</option>
+                    <option>Psicologia</option>
+                    <option>Fonoaudiologia</option>
+                  </optgroup>
+                  <optgroup label="── Estética & Wellness">
+                    <option>Clínica de Estética</option>
+                    <option>Pilates / Yoga</option>
+                    <option>Medicina Integrativa</option>
+                  </optgroup>
+                  <optgroup label="── Outros">
+                    <option>Clínica Multi-especialidades</option>
+                    <option>Laboratório / Diagnóstico</option>
+                    <option>Outro segmento</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="f-whatsapp">WhatsApp *</label>
+                <input type="tel" class="form-input" id="f-whatsapp" placeholder="(37) 9 9999-9999" autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-email">E-mail</label>
+                <input type="email" class="form-input" id="f-email" placeholder="seu@email.com.br" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-cidade">Cidade / Estado *</label>
+              <input type="text" class="form-input" id="f-cidade" placeholder="Ex: Itaúna / MG">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-desafio">Principal desafio</label>
+              <select class="form-select" id="f-desafio">
+                <option value="" disabled selected>O que mais te preocupa?</option>
+                <option>Não tenho site ou está desatualizado</option>
+                <option>Perco pacientes sem agendamento online</option>
+                <option>Muitas faltas na agenda</option>
+                <option>Perco pacientes fora do horário comercial</option>
+                <option>Instagram sem presença organizada</option>
+                <option>Poucas avaliações no Google</option>
+                <option>Preciso de tudo isso</option>
+              </select>
+            </div>
+            <button type="button" class="form-submit" onclick="submitLead()">
+              Solicitar diagnóstico gratuito →
+            </button>
+            <p class="form-note">🔒 Dados protegidos · LGPD · Sem spam · Sem compromisso</p>
+          </div>
+          <div class="form-success" id="form-success">
+            <div class="form-success-icon">🚀</div>
+            <h3>Pra cima sempre!</h3>
+            <p>Recebemos, <strong id="success-name"></strong>!<br>Jardel entra em contato em breve via WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CTA FINAL
+════════════════════════════════════════ -->
+<section class="cta-final" id="contato">
+  <div class="container">
+    <h2 class="cta-title reveal">
+      Pronto para destravar<br>
+      <strong>a alta performance?</strong>
+    </h2>
+    <p class="cta-body reveal reveal-d1">Em 7 dias úteis sua clínica terá IA atendendo 24h, agenda preenchendo sozinha e presença digital de elite. Diagnóstico gratuito, sem compromisso.</p>
+    <div class="cta-actions reveal reveal-d2">
+      <a href="https://wa.me/5537993518260?text=Olá+Jardel!+Quero+destravar+a+alta+performance+da+minha+clínica" class="btn-wa" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar no WhatsApp agora
+      </a>
+      <a href="mailto:contato@jardelguimaraes.com.br" class="btn-primary" style="background:rgba(255,255,255,.12);backdrop-filter:blur(8px);">
+        contato@jardelguimaraes.com.br
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-img"><img src="img/logogj.png" alt="JGAutomações.AI"></div>
+          <div>
+            <div class="footer-brand">JGAutomações<span class="ai">.AI</span></div>
+            <div class="footer-tagline">Saúde · Performance · IA</div>
+          </div>
+        </div>
+        <p class="footer-desc">IA especializada para clínicas e consultórios. Itaúna/MG · Atende todo o Brasil.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Soluções</h5>
+        <ul>
+          <li><a href="#solucoes">Agente IA WhatsApp</a></li>
+          <li><a href="#solucoes">Agenda Inteligente</a></li>
+          <li><a href="#solucoes">Presença Digital</a></li>
+          <li><a href="#solucoes">NPS Automático</a></li>
+          <li><a href="#solucoes">Reativação de Pacientes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Especialidades</h5>
+        <ul>
+          <li><a href="#diagnostico">Clínicas Médicas</a></li>
+          <li><a href="#diagnostico">Odontologia</a></li>
+          <li><a href="#diagnostico">Fisioterapia</a></li>
+          <li><a href="#diagnostico">Psicologia</a></li>
+          <li><a href="#diagnostico">Estética & Wellness</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="https://wa.me/5537993518260" target="_blank">(37) 99935-1826</a></li>
+          <li><a href="mailto:contato@jardelguimaraes.com.br">contato@jardelguimaraes.com.br</a></li>
+          <li><a href="https://instagram.com/jgautomacao.ai" target="_blank">@jgautomacao.ai</a></li>
+          <li><a href="#">Itaúna / MG · Brasil</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 <a href="#">JGAutomações.AI</a> · LGPD Compliant · Todos os direitos reservados</div>
+      <div class="footer-lema">Pra cima sempre <span>🚀</span> Jardel Guimarães</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── WHATSAPP FLOAT ── -->
+<div class="wa-float">
+  <div class="wa-tip" id="wa-tip">
+    <strong>👋 Alta performance!</strong>Diagnóstico gratuito para sua clínica — sem compromisso.
+  </div>
+  <a href="https://wa.me/5537993518260?text=Olá+Jardel!+Vi+seu+site+e+quero+um+diagnóstico+gratuito" class="wa-btn-float" id="wa-btn-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <div class="wa-notif">1</div>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<script src="js/main.js"></script>
 </body>
-
-
-
+</html>
