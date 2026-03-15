@@ -299,12 +299,36 @@
 </div>
 
 <script>
-/* ── Webhook fire-and-forget ── */
+/* ── Rastreamento JGAutomações.AI ── */
+(function() {
+  const trackData = {
+    evento: 'acesso_bio',
+    userAgent: navigator.userAgent,
+    referrer: document.referrer || "Acesso Direto",
+    url: window.location.href,
+    res: `${window.screen.width}x${window.screen.height}`,
+    timestamp: new Date().toISOString()
+  };
+  fetch('https://webhook.jardelguimaraes.com.br/bio-click', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(trackData),
+    keepalive: true
+  }).catch(() => {});
+})();
+
 function dispararWebhookBio(link, tipo) {
   fetch('https://webhook.jardelguimaraes.com.br/bio-click', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ link, tipo, pagina: 'bio', timestamp: new Date().toISOString() }),
+    body: JSON.stringify({ 
+      evento: 'clique_bio',
+      link, 
+      tipo, 
+      userAgent: navigator.userAgent,
+      res: `${window.screen.width}x${window.screen.height}`,
+      timestamp: new Date().toISOString() 
+    }),
     keepalive: true
   }).catch(() => {});
 }
