@@ -309,9 +309,8 @@
     screenResolution: `${window.screen.width}x${window.screen.height}`,
     timestamp: new Date().toISOString()
   };
-  fetch('https://webhook.jardelguimaraes.com.br/rastreio-bio', {
+  fetch('https://webhook.jardelguimaraes.com.br/webhook/rastreio-bio', {
     method: 'POST',
-    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(trackData),
     keepalive: true
@@ -319,9 +318,8 @@
 })();
 
 function dispararWebhookBio(link, tipo) {
-  fetch('https://webhook.jardelguimaraes.com.br/rastreio-bio', {
+  fetch('https://webhook.jardelguimaraes.com.br/webhook/rastreio-bio', {
     method: 'POST',
-    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ 
       evento: 'clique_bio',
