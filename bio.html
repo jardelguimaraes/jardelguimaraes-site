@@ -301,35 +301,32 @@
 <script>
 /* ── Rastreamento JGAutomações.AI ── */
 (function() {
-  const trackData = {
-    evento: 'acesso_bio',
+  const data = {
     userAgent: navigator.userAgent,
     referrer: document.referrer || "Acesso Direto",
     url: window.location.href,
-    screenResolution: `${window.screen.width}x${window.screen.height}`,
-    timestamp: new Date().toISOString()
+    screenResolution: `${window.screen.width}x${window.screen.height}`
   };
   fetch('https://webhook.jardelguimaraes.com.br/webhook/rastreio-bio', {
     method: 'POST',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(trackData),
-    keepalive: true
+    body: JSON.stringify(data)
   }).catch(() => {});
 })();
 
-function dispararWebhookBio(link, tipo) {
+function dispararWebhookBio(linkText, tipo) {
+  const data = {
+    link: linkText,
+    tipo: tipo,
+    userAgent: navigator.userAgent,
+    screenResolution: `${window.screen.width}x${window.screen.height}`
+  };
   fetch('https://webhook.jardelguimaraes.com.br/webhook/rastreio-bio', {
     method: 'POST',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ 
-      evento: 'clique_bio',
-      link, 
-      tipo, 
-      userAgent: navigator.userAgent,
-      screenResolution: `${window.screen.width}x${window.screen.height}`,
-      timestamp: new Date().toISOString() 
-    }),
-    keepalive: true
+    body: JSON.stringify(data)
   }).catch(() => {});
 }
 document.querySelectorAll('[data-bio-link]').forEach(el => {
