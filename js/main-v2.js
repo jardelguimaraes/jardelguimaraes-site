@@ -171,9 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
     phoneInput.addEventListener('input', function () {
       let v = this.value.replace(/\D/g, '');
       if (v.length <= 2) v = '(' + v;
-      else if (v.length <= 6) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
-      else if (v.length <= 10) v = '(' + v.slice(0,2) + ') ' + v.slice(2,6) + '-' + v.slice(6);
-      else v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7,11);
+      else if (v.length <= 6) v = '(' + v.slice(0, 2) + ') ' + v.slice(2);
+      else if (v.length <= 10) v = '(' + v.slice(0, 2) + ') ' + v.slice(2, 6) + '-' + v.slice(6);
+      else v = '(' + v.slice(0, 2) + ') ' + v.slice(2, 7) + '-' + v.slice(7, 11);
       this.value = v;
     });
   }
@@ -197,19 +197,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     if (!valid) return;
 
-    const nome    = document.getElementById('f-nome').value.trim();
-    const tipoEl  = document.getElementById('f-tipo');
-    const tipo    = tipoEl.options[tipoEl.selectedIndex]?.text || '';
-    const zap     = document.getElementById('f-whatsapp').value.trim();
-    const cidade  = document.getElementById('f-cidade').value.trim();
-    const email   = document.getElementById('f-email')?.value.trim() || 'Não informado';
+    const nome = document.getElementById('f-nome').value.trim();
+    const tipoEl = document.getElementById('f-tipo');
+    const tipo = tipoEl.options[tipoEl.selectedIndex]?.text || '';
+    const zap = document.getElementById('f-whatsapp').value.trim();
+    const cidade = document.getElementById('f-cidade').value.trim();
+    const email = document.getElementById('f-email')?.value.trim() || 'Não informado';
     const desafioEl = document.getElementById('f-desafio');
     const desafio = desafioEl?.value ? desafioEl.options[desafioEl.selectedIndex].text : 'Não informado';
 
     const formWrap = document.getElementById('form-wrap');
     const formSuccess = document.getElementById('form-success');
     const successName = document.getElementById('success-name');
-    
+
     // N8N Webhook submit logic
     const submitBtn = document.querySelector('.form-submit');
     const originalText = submitBtn.innerHTML;
@@ -217,66 +217,26 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.style.opacity = '0.7';
     submitBtn.style.pointerEvents = 'none';
 
-    // Captura silenciosa de dados do visitante
-    const ua = navigator.userAgent;
-    const dispositivo = /iPhone/.test(ua) ? 'iPhone'
-      : /iPad/.test(ua) ? 'iPad'
-      : /Android/.test(ua) ? 'Android'
-      : /Windows/.test(ua) ? 'Windows'
-      : /Mac/.test(ua) ? 'Mac'
-      : 'Outro';
-    const tela = window.screen.width + 'x' + window.screen.height;
-    const navegador = /Chrome/.test(ua) && !/Edg/.test(ua) ? 'Chrome'
-      : /Safari/.test(ua) && !/Chrome/.test(ua) ? 'Safari'
-      : /Firefox/.test(ua) ? 'Firefox'
-      : /Edg/.test(ua) ? 'Edge' : 'Outro';
-    const urlParams = new URLSearchParams(window.location.search);
-    const utm_source = urlParams.get('utm_source') || 'direto';
-    const utm_medium = urlParams.get('utm_medium') || '';
-    const utm_campaign = urlParams.get('utm_campaign') || '';
-    const referencia = document.referrer
-      ? (document.referrer.includes('instagram') ? 'Instagram'
-        : document.referrer.includes('google') ? 'Google'
-        : document.referrer.includes('facebook') ? 'Facebook'
-        : document.referrer)
-      : 'Direto';
-
-    fetch('https://webhook.jardelguimaraes.com.br/webhook/nexus-leads-site', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, especialidade: tipo, whatsapp: zap, cidade, email, desafio,
-          dispositivo, tela, navegador, utm_source, utm_medium, utm_campaign, referencia })
+    fetch('https://webhook.jardelguimaraes.com.br/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nome, especialidade: tipo, whatsapp: zap, cidade, email, desafio })
     })
-    .then(() => {
-        showSuccess(nome);
-    })
-    .catch(error => {
-        console.error('Erro de submissão:', error);
-        showSuccess(nome);
-    });
-
-    function showSuccess(name) {
-        if (formWrap) {
-            formWrap.style.opacity = '0';
-            setTimeout(() => {
-                formWrap.style.display = 'none';
-                if (formSuccess) {
-                    formSuccess.style.display = 'block';
-                    formSuccess.style.opacity = '1';
-                }
-            }, 300);
-        }
-        if (successName) {
-            const parts = name.trim().split(/\s+/);
-            const titles = ['dr', 'dra', 'drª', 'sr', 'sra', 'profa', 'prof'];
-            let firstName = parts[0];
-            if (parts.length > 1 && titles.includes(parts[0].toLowerCase().replace('.', ''))) {
-                firstName = parts[1];
-            }
-            successName.textContent = firstName;
-        }
-    }
+      .then(response => response.json())
+      .then(result => {
+        console.log('Sucesso N8N:', result);
+        alert('Enviado com sucesso! Entraremos em contato em breve.');
+        if (formWrap) formWrap.style.display = 'none';
+        if (formSuccess) formSuccess.style.display = 'block';
+        if (successName) successName.textContent = nome.split(' ')[0];
+      })
+      .catch(error => {
+        console.error('Erro N8N:', error);
+        alert('Erro ao enviar. Tente novamente ou use o botão do WhatsApp flutuante.');
+        submitBtn.innerHTML = originalText;
+        submitBtn.style.opacity = '1';
+        submitBtn.style.pointerEvents = 'auto';
+      });
   };
 
   /* ── SMOOTH SCROLL for anchor links ── */
@@ -296,8 +256,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.svc-card, .num-card').forEach(card => {
     card.addEventListener('mousemove', e => {
       const r = card.getBoundingClientRect();
-      const x = ((e.clientX - r.left) / r.width  - .5) * 8;
-      const y = ((e.clientY - r.top)  / r.height - .5) * 8;
+      const x = ((e.clientX - r.left) / r.width - .5) * 8;
+      const y = ((e.clientY - r.top) / r.height - .5) * 8;
       card.style.transform = `translateY(-6px) rotateX(${-y}deg) rotateY(${x}deg)`;
       card.style.transition = 'transform .08s ease';
     });
