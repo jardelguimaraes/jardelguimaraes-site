@@ -206,22 +206,77 @@ document.addEventListener('DOMContentLoaded', () => {
     const desafioEl = document.getElementById('f-desafio');
     const desafio = desafioEl?.value ? desafioEl.options[desafioEl.selectedIndex].text : 'Não informado';
 
-    const msg = encodeURIComponent(
-      `Olá Jardel! Quero um diagnóstico gratuito.\n\n` +
-      `👤 Nome: ${nome}\n🏥 Especialidade: ${tipo}\n📍 Cidade: ${cidade}\n` +
-      `📞 WhatsApp: ${zap}\n📧 E-mail: ${email}\n💬 Desafio: ${desafio}\n\n` +
-      `Vi o site jardelguimaraes.com.br`
-    );
-
     const formWrap = document.getElementById('form-wrap');
     const formSuccess = document.getElementById('form-success');
     const successName = document.getElementById('success-name');
-    if (formWrap) formWrap.style.display = 'none';
-    if (formSuccess) formSuccess.style.display = 'block';
-    if (successName) successName.textContent = nome.split(' ')[0];
-    setTimeout(() => {
-      window.open(`https://wa.me/5537993518260?text=${msg}`, '_blank');
-    }, 1000);
+    
+    // N8N Webhook submit logic
+    const submitBtn = document.querySelector('.form-submit');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Enviando...';
+    submitBtn.style.opacity = '0.7';
+    submitBtn.style.pointerEvents = 'none';
+
+    // Captura silenciosa de dados do visitante
+    const ua = navigator.userAgent;
+    const dispositivo = /iPhone/.test(ua) ? 'iPhone'
+      : /iPad/.test(ua) ? 'iPad'
+      : /Android/.test(ua) ? 'Android'
+      : /Windows/.test(ua) ? 'Windows'
+      : /Mac/.test(ua) ? 'Mac'
+      : 'Outro';
+    const tela = window.screen.width + 'x' + window.screen.height;
+    const navegador = /Chrome/.test(ua) && !/Edg/.test(ua) ? 'Chrome'
+      : /Safari/.test(ua) && !/Chrome/.test(ua) ? 'Safari'
+      : /Firefox/.test(ua) ? 'Firefox'
+      : /Edg/.test(ua) ? 'Edge' : 'Outro';
+    const urlParams = new URLSearchParams(window.location.search);
+    const utm_source = urlParams.get('utm_source') || 'direto';
+    const utm_medium = urlParams.get('utm_medium') || '';
+    const utm_campaign = urlParams.get('utm_campaign') || '';
+    const referencia = document.referrer
+      ? (document.referrer.includes('instagram') ? 'Instagram'
+        : document.referrer.includes('google') ? 'Google'
+        : document.referrer.includes('facebook') ? 'Facebook'
+        : document.referrer)
+      : 'Direto';
+
+    fetch('https://webhook.jardelguimaraes.com.br/webhook/nexus-leads-site', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, especialidade: tipo, whatsapp: zap, cidade, email, desafio,
+          dispositivo, tela, navegador, utm_source, utm_medium, utm_campaign, referencia })
+    })
+    .then(() => {
+        showSuccess(nome);
+    })
+    .catch(error => {
+        console.error('Erro de submissão:', error);
+        showSuccess(nome);
+    });
+
+    function showSuccess(name) {
+        if (formWrap) {
+            formWrap.style.opacity = '0';
+            setTimeout(() => {
+                formWrap.style.display = 'none';
+                if (formSuccess) {
+                    formSuccess.style.display = 'block';
+                    formSuccess.style.opacity = '1';
+                }
+            }, 300);
+        }
+        if (successName) {
+            const parts = name.trim().split(/\s+/);
+            const titles = ['dr', 'dra', 'drª', 'sr', 'sra', 'profa', 'prof'];
+            let firstName = parts[0];
+            if (parts.length > 1 && titles.includes(parts[0].toLowerCase().replace('.', ''))) {
+                firstName = parts[1];
+            }
+            successName.textContent = firstName;
+        }
+    }
   };
 
   /* ── SMOOTH SCROLL for anchor links ── */
