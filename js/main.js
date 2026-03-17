@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.style.opacity = '0.7';
     submitBtn.style.pointerEvents = 'none';
 
-    fetch('https://webhook.jardelguimaraes.com.br/submit', {
+    fetch('https://webhook.jardelguimaraes.com.br/webhook/nexus-leads-site', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nome, especialidade: tipo, whatsapp: zap, cidade, email, desafio })
