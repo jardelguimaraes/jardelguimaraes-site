@@ -219,17 +219,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetch('https://webhook.jardelguimaraes.com.br/webhook/nexus-leads-site', {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nome, especialidade: tipo, whatsapp: zap, cidade, email, desafio })
     })
-    .then(response => response.json())
-    .then(result => {
+    .then(() => {
         showSuccess(nome);
     })
     .catch(error => {
         console.error('Erro de submissão:', error);
-        // Exibimos sucesso para não frustrar o usuário caso o webhook tenha instabilidade momentânea
-        // mas o lead já tenha sido disparado (ou para o caso de estarmos em ambiente de teste)
         showSuccess(nome);
     });
 
@@ -244,7 +242,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }, 300);
         }
-        if (successName) successName.textContent = name.split(' ')[0];
+        if (successName) {
+            const parts = name.trim().split(/\s+/);
+            const titles = ['dr', 'dra', 'drª', 'sr', 'sra', 'profa', 'prof'];
+            let firstName = parts[0];
+            if (parts.length > 1 && titles.includes(parts[0].toLowerCase().replace('.', ''))) {
+                firstName = parts[1];
+            }
+            successName.textContent = firstName;
+        }
     }
   };
 
