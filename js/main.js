@@ -243,7 +243,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetch('https://webhook.jardelguimaraes.com.br/webhook/nexus-leads-site', {
         method: 'POST',
-        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nome, especialidade: tipo, whatsapp: zap, cidade, email, desafio,
           dispositivo, tela, navegador, utm_source, utm_medium, utm_campaign, referencia })
