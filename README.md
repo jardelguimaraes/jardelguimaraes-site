@@ -43,7 +43,7 @@ O CSS já aplica `object-fit: cover` para preencher os círculos corretamente.
 
 ## 📞 Contatos
 
-- WhatsApp: [(37) 99935-1826](https://wa.me/5537993518260)
+- WhatsApp: [(37) 99935-1826](https://wa.me/5537999351826)
 - E-mail: contato@jardelguimaraes.com.br
 - Instagram: [@jgautomacao.ai](https://instagram.com/jgautomacao.ai)
 
